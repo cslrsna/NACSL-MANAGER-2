@@ -5,7 +5,7 @@ use ArrayAccess;
 
 final class AppConstants
 {
-    const PLUGIN_NAME = "NACSL MANAGER";
+    const PLUGIN_NAME = "NACSL-MANAGER";
     const PREFIX = "nacsl_";
     const TEXT_DOMAIN = "nacsl_domain";
 
