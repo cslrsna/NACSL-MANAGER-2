@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       NACSL-MANAGER
- * Plugin URI:        https://github.com/cslrsna/NACSL-MANAGER
+ * Plugin URI:        https://github.com/cslrsna/NACSL-MANAGER-2
  * Description:       Gestionnaire de réunions, groupes, sous-comités et activités d'un CSL de Narcotiques Anonymes. 
  * Version:           2.0
  * Requires at least: 6.0.1
@@ -10,7 +10,7 @@
  * Author URI:        mailto://bruno@lecanardnoir.ca
  * License:           MIT
  * License URI:       https://choosealicense.com/licenses/mit/
- * Update URI:        https://github.com/cslrsna/NACSL-MANAGER
+ * Update URI:        https://github.com/cslrsna/NACSL-MANAGER-2
  * Text Domain:       nacsl_domain
  * Domain Path:       src/Languages
  * 
@@ -31,10 +31,31 @@
 if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
+use NACSL\App;
 use NACSL\Services\SetupService;
 use NACSL\Utilities\AppConstants;
 
-AppConstants::Hydrate(__FILE__, __DIR__);
+AppConstants::$__FILE__ = __file__;
+AppConstants::$__DIR__ = __dir__;
+
+AppConstants::$adminPath = __dir__ . "admin/";
+AppConstants::$adminUrl = plugin_dir_url(__file__) . "admin/";        
+AppConstants::$publicPath = __dir__ . "public/";
+AppConstants::$publicUrl = plugin_dir_url(__file__) . "public/";        
+AppConstants::$languagesPath = __dir__ . "languages/";
+AppConstants::$languagesUrl = plugin_dir_url(__file__) . "languages/";
+
+AppConstants::$basename = plugin_basename(__file__);
+
+if( !function_exists('get_plugin_data') ){
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+}
+AppConstants::$data = get_plugin_data(__file__);   
+AppConstants::$version = AppConstants::$data['Version'];
+
 
 register_activation_hook( __FILE__, [SetupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [SetupService::class, 'Deactivate'] );
+
+$app = App::GetInstance();
+$app->Init();
