@@ -58,4 +58,4 @@ register_activation_hook( __FILE__, [SetupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [SetupService::class, 'Deactivate'] );
 
 $app = App::GetInstance();
-add_action('init', [$app, 'init']);
+$app->Init();
