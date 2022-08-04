@@ -25,7 +25,7 @@
  * GNU General Public License for more details.
  *  
  * You should have received a copy of the GNU General Public License
- * along with NACSL-MANAGER. If not, see {URI to Plugin License}.
+ * along with NACSL-MANAGER. If not, see https://github.com/cslrsna/NACSL-MANAGER-2/blob/main/LICENSE.
  */
 
 if( ! defined('WPINC') ) die();
