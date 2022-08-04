@@ -8,12 +8,11 @@ final class SetupService
 {
     public static function Activate():void
     {
-        self::CheckDependencies();
         AuthorizationService::ActivateDeactivatePluginsAllowed();
-        add_option(AppConstants::OPT_ACTIVATED, false);
+        self::Dependencies();
+        update_option(AppConstants::OPT_ACTIVATED, false);
         if( !get_option(AppConstants::OPT_VERSION))
-            add_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
-
+            update_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
         //foreach ( $cptList as $cpt) $cpt->Register();
         flush_rewrite_rules();
     }
@@ -33,7 +32,7 @@ final class SetupService
         delete_option(AppConstants::OPT_VERSION);
     }
 
-    public static function CheckDependencies():void
+    public static function Dependencies():void
     {
         $requireDep = array();
         foreach (Config::$dependencies as $plugin => $basename) {
@@ -42,6 +41,16 @@ final class SetupService
                 $requireDep[] = $plugin;
             }
         }
-        if( count($requireDep) > 0 ) exit( __("<strong>NACSL-MANAGER:</strong> Certaines dépendances sont manquantes. Veuillez installer et activer ces extensions avant d'activer le gestionnaire de réunions de Narcotiques Anonymes. <hr><b>Liste des extensions manquantes:</b> <i>", AppConstants::TEXT_DOMAIN) . join(' ,', $requireDep) . "</i>" );
+        if( count($requireDep) > 0 ) 
+        {
+            deactivate_plugins(AppConstants::$basename, true);
+            //exit( __("<strong>NACSL-MANAGER:</strong> Certaines dépendances sont manquantes. Veuillez installer et activer ces extensions avant d'activer le gestionnaire de réunions de Narcotiques Anonymes. <hr><b>Liste des extensions manquantes:</b> <i>", AppConstants::TEXT_DOMAIN) . join(' ,', $requireDep) . "</i>" );
+        }
+    }
+    public static function Update():void
+    {
+        $oldVer = get_option(AppConstants::OPT_VERSION);
+        $newVer = AppConstants::$version;
+        if($oldVer != $newVer) update_option(AppConstants::OPT_VERSION, $newVer);
     }
 }

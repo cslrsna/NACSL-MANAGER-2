@@ -2,6 +2,7 @@
 namespace NACSL\Utilities;
 
 use ArrayAccess;
+use ParagonIE\Sodium\Core\Poly1305\State;
 
 final class AppConstants
 {
@@ -22,28 +23,8 @@ final class AppConstants
     public static string $languagesUrl;
     public static array $data;
     public static string $basename;
+    public static string $version;
 
-    public static function Hydrate(string $__file__, string $__dir__):void
-    {
-        self::$__FILE__ = __file__;
-        self::$__DIR__ = __dir__;
-        
-        self::$adminPath = __dir__ . "admin/";
-        self::$adminUrl = plugin_dir_url(__file__) . "admin/";
-        
-        self::$publicPath = __dir__ . "public/";
-        self::$publicUrl = plugin_dir_url(__file__) . "public/";
-        
-        self::$languagesPath = __dir__ . "languages/";
-        self::$languagesUrl = plugin_dir_url(__file__) . "languages/";
-        
-        self::$basename = basename(__file__);
-        
-        if( !function_exists('get_plugin_data') ){
-            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-        }
-        self::$data = get_plugin_data(__file__);        
-    }
     public static function ToArray(){
         return array(
             'PLUGIN_NAME' => self::PLUGIN_NAME,
@@ -60,7 +41,8 @@ final class AppConstants
             'languagesPath' => self::$languagesPath,
             'languagesUrl' => self::$languagesUrl,
             'data' => self::$data,
-            'basename' => self::$basename
+            'basename' => self::$basename,
+            'version' => self::$version
         );
     }
 }
