@@ -71,7 +71,7 @@ class AdminNotice implements IHookAdmin
             $content,
             true
         );
-        $this->Hook();
+        $this->AdminHook();
     }
 
     /**
@@ -81,15 +81,17 @@ class AdminNotice implements IHookAdmin
      * @throws RuntimeError 
      * @throws SyntaxError 
      */
-    public function Action():void
+    public function Views():void
     {
         Timber::render('_AdminNoticesPartial.twig', $this->_noticeVM->ToArray());
     }
 
-    public function Hook(): void 
+    public function AdminHook(): void 
     { 
-        $this->RemoveDefault();
-        add_action( 'admin_notices', array($this, 'Action'));
+        if(is_admin()){
+            $this->RemoveDefault();
+            add_action( 'admin_notices', array($this, 'Views'));
+        };
     }
     
 }

@@ -12,6 +12,7 @@ use NACSL\Utilities\EnumAdminNoticeType;
  */
 final class StartupService
 {
+    public static array $colCustomPostType = array();
     /**
      * Activate NACSL-MANAGER
      * @return void 
@@ -21,7 +22,11 @@ final class StartupService
         AuthorizationService::ActivateDeactivatePluginsAllowed();
         if( !get_option(AppConstants::OPT_VERSION))
             update_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
-        //foreach ( $cptList as $cpt) $cpt->Register();
+
+        foreach (self::$colCustomPostType as $cpt) {
+            $cpt->Register();
+        }       
+
         flush_rewrite_rules();
         update_option(AppConstants::OPT_ACTIVATED,self::Dependencies());
     }
@@ -34,7 +39,11 @@ final class StartupService
     {
         AuthorizationService::ActivateDeactivatePluginsAllowed($_REQUEST['action'], $_REQUEST['_wpnonce']);
         update_option(AppConstants::OPT_ACTIVATED, false);
-        //foreach ( $cptList as $cpt) $cpt->Unregister();
+
+        foreach (self::$colCustomPostType as $cpt) {
+            $cpt->Unregister();
+        }
+
         flush_rewrite_rules();
     }
 
@@ -47,6 +56,8 @@ final class StartupService
         AuthorizationService::UninstallPluginsAllowed($_REQUEST['action'], $_REQUEST['_ajax_nonce']);
         delete_option(AppConstants::OPT_ACTIVATED);
         delete_option(AppConstants::OPT_VERSION);
+        //global $wpdb;
+        //$wpdb->delete($wpdb->posts, array( 'post_type' => 'nacsl_cptgroups' ));
     }
     /**
      * Check if NACSL-MANAGER is installed correctly. Show admin notice just one time.
