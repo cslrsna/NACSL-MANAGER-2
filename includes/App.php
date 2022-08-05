@@ -1,9 +1,10 @@
 <?php
 namespace NACSL;
 
-use NACSL\Services\SetupService;
+use NACSL\Services\StartupService;
+
 /**
- * App
+ * NACSL-MANAGER App
  * @package NACSL
  */
 final class App
@@ -13,7 +14,7 @@ final class App
     private function __construct(){}
 
     /**
-     * Get instance of App
+     * Get instance of NACSL-MANAGER App
      * @return App 
      */
     public static function GetInstance():App
@@ -24,11 +25,13 @@ final class App
     }
 
     /**
-     * App initialisation
+     * NACSL-MANAGER App initialization
      */
     public function Init()
     {
-        SetupService::Dependencies();
-        SetupService::Update();
+        StartupService::LoadAssets();
+        StartupService::Dependencies();
+        StartupService::Update();
+        StartupService::IsInstall();
     }
 }

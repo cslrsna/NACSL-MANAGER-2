@@ -1,3 +1,19 @@
-li[class*="nacsl"] .wp-menu-image > img{
-    width: 20px;
+.notice-wrapper, .notice-body {
+    display: flex;
+}
+.notice-wrapper .logo img{
+    margin: 14px 1em 0 0;
+}
+
+
+.notice-body header h2{
+    margin:14px 0 0 0;
+}
+
+.notice-body header h3{
+    margin: 0 0 1em 0;
+    font-weight: 100;
+}
+#adminmenu img[src*=".svg"] {
+    width: 20px !important;
 }
