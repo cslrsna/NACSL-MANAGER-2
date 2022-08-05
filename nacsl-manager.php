@@ -3,14 +3,13 @@
  * Plugin Name:       NACSL-MANAGER
  * Plugin URI:        https://github.com/cslrsna/NACSL-MANAGER-2
  * Description:       Gestionnaire de réunions, groupes, sous-comités et activités d'un CSL de Narcotiques Anonymes. 
- * Version:           2.0
+ * Version:           2.0.1
  * Requires at least: 6.0.1
  * Requires PHP:      8.1
  * Author:            Bruno Pouliot
  * Author URI:        mailto://bruno@lecanardnoir.ca
  * License:           MIT
  * License URI:       https://choosealicense.com/licenses/mit/
- * Update URI:        https://github.com/cslrsna/NACSL-MANAGER-2
  * Text Domain:       nacsl_domain
  * Domain Path:       src/Languages
  * 
@@ -32,8 +31,9 @@ if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
 use NACSL\App;
-use NACSL\Services\SetupService;
+use NACSL\Services\StartupService;
 use NACSL\Utilities\AppConstants;
+use Timber\Timber;
 
 AppConstants::$__FILE__ = __file__;
 AppConstants::$__DIR__ = __dir__;
@@ -53,9 +53,10 @@ if( !function_exists('get_plugin_data') ){
 AppConstants::$data = get_plugin_data(__file__);   
 AppConstants::$version = AppConstants::$data['Version'];
 
+Timber::$locations = __DIR__ . "/includes/Views";
 
-register_activation_hook( __FILE__, [SetupService::class, 'Activate'] );
-register_deactivation_hook( __FILE__, [SetupService::class, 'Deactivate'] );
+register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );
+register_deactivation_hook( __FILE__, [StartupService::class, 'Deactivate'] );
 
 $app = App::GetInstance();
 $app->Init();
