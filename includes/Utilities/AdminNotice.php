@@ -6,6 +6,9 @@ use NACSL\Utilities\AppConstants;
 use NACSL\Utilities\EnumAdminNoticeType;
 use NACSL\Utilities\IHookAdmin;
 use Timber\Timber;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 /**
  * Override Administrator notices
@@ -18,7 +21,7 @@ class AdminNotice implements IHookAdmin
     private string $_pluginName;
 
     /**
-     * Instance of AdminNotice
+     * Instance of AdminNotice and show an admin notice
      * @param EnumAdminNoticeType $noticeType @see NACSL\Utilities\EnumAdminNoticeType
      * @param string $subTitle Notice sub title
      * @param string $content Notice content
@@ -32,7 +35,10 @@ class AdminNotice implements IHookAdmin
         $this->Message($noticeType, $subTitle, $content, $description);
     }
 
-
+    /**
+     * Remove the default Admin notice
+     * @return void 
+     */
     public static function RemoveDefault(){
         add_action('admin_head', function(){
             ?>
@@ -45,13 +51,22 @@ class AdminNotice implements IHookAdmin
         });
     }
 
-    public function Message(EnumAdminNoticeType $noticeType, string $title, string $content, string $description = '')
+    /**
+     * Show an admin notice
+     * @param EnumAdminNoticeType $noticeType @see NACSL\Utilities\EnumAdminNoticeType
+     * @param EnumAdminNoticeType $noticeType 
+     * @param string $subTitle Notice sub title
+     * @param string $content Notice content
+     * @param string $description (optional) Notice description
+     * @return void 
+     */
+    public function Message(EnumAdminNoticeType $noticeType, string $subTitle, string $content, string $description = '')
     {
         $this->_noticeVM = new AdminNoticeVM( 
             $this->_logo, 
             $noticeType,
             $this->_pluginName,
-            $title,
+            $subTitle,
             $description,
             $content,
             true
@@ -59,6 +74,13 @@ class AdminNotice implements IHookAdmin
         $this->Hook();
     }
 
+    /**
+     * Hook action display Admin notice
+     * @return void 
+     * @throws LoaderError 
+     * @throws RuntimeError 
+     * @throws SyntaxError 
+     */
     public function Action():void
     {
         Timber::render('_AdminNoticesPartial.twig', $this->_noticeVM->ToArray());
