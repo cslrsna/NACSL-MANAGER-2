@@ -12,7 +12,7 @@ class CptMeetings extends CustomPostType
         $this->labels = $labels;
         $this->description = __("Réunions faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "reunions";
-        //$this->menu_position = -1;
+        $this->menu_position = -10;
         $this->menu_icon = AppConstants::$adminUrl . "images/logo-na.svg";
         $this->rewrite['slug'] = 'reunions';
     }    

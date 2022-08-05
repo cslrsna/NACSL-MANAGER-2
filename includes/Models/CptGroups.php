@@ -12,7 +12,7 @@ class CptGroups extends CustomPostType
         $this->labels = $labels;
         $this->description = __("Groupes faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "groupes";
-        //$this->menu_position = -1;
+        $this->menu_position = -11;
         $this->menu_icon = AppConstants::$adminUrl . "images/logo-na.svg";
         $this->rewrite['slug'] = 'groupes';
     }    

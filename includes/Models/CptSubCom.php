@@ -12,7 +12,7 @@ class CptSubCom extends CustomPostType
         $this->labels = $labels;
         $this->description = __("Sous-comités faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "sous-comites";
-        //$this->menu_position = -1;
+        $this->menu_position = -12;
         $this->menu_icon = AppConstants::$adminUrl . "images/logo-na.svg";
         $this->rewrite['slug'] = 'sous-comites';
     }    
