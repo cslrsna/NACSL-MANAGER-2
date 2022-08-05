@@ -50,8 +50,9 @@ final class StartupService
     }
     /**
      * Check if NACSL-MANAGER is installed correctly. Show admin notice just one time.
+     * @return void 
      */
-    public static function IsInstall()
+    public static function IsInstall():void
     {
         if( get_option(AppConstants::OPT_ACTIVATED) )
         {
@@ -60,6 +61,10 @@ final class StartupService
         }
     }
 
+    /**
+     * Check dependencies and deactivate plugin if is missing some dependencies.
+     * @return bool 
+     */
     public static function Dependencies():bool
     {
         $requireDep = array();
@@ -74,11 +79,20 @@ final class StartupService
             deactivate_plugins(AppConstants::$basename, true);
             update_option(AppConstants::OPT_ACTIVATED, false);
             flush_rewrite_rules();          
-            new AdminNotice(EnumAdminNoticeType::ERROR,__("Dépendances",AppConstants::TEXT_DOMAIN),__("</strong> Certaines dépendances sont manquantes. Veuillez installer et activer ces extensions avant d'activer le gestionnaire de réunions de Narcotiques Anonymes. <hr><b>Liste des extensions manquantes:</b><br><i>", AppConstants::TEXT_DOMAIN) . join(' ,', $requireDep) . "</i>");
+            new AdminNotice(
+                EnumAdminNoticeType::ERROR,
+                __("Dépendances",AppConstants::TEXT_DOMAIN),
+                __("</strong> Certaines dépendances sont manquantes. Veuillez installer et activer ces extensions avant d'activer le gestionnaire de réunions de Narcotiques Anonymes. <hr><b>Liste des extensions manquantes:</b><br><i>", AppConstants::TEXT_DOMAIN) . join(' ,', $requireDep) . "</i>"
+            );
             return false;
         }
         return true;
     }
+
+    /**
+     * For future update if some stuff need to be done this will be the place to write update logic. Show admin notice if an update has been done.
+     * @return void 
+     */
     public static function Update():void
     {
         $oldVer = get_option(AppConstants::OPT_VERSION);
@@ -89,12 +103,20 @@ final class StartupService
 
             // stop updating
             update_option(AppConstants::OPT_VERSION, $newVer);
-            new AdminNotice(EnumAdminNoticeType::SUCCESS,__("Mise à jour",AppConstants::TEXT_DOMAIN),__("L'extension est passée de la version <b>$oldVer</b> à la version <b>$newVer</b> correctement.", AppConstants::TEXT_DOMAIN));
+            new AdminNotice(
+                EnumAdminNoticeType::SUCCESS,
+                __("Mise à jour",AppConstants::TEXT_DOMAIN),
+                __("L'extension est passée de la version <b>$oldVer</b> à la version <b>$newVer</b> correctement.", AppConstants::TEXT_DOMAIN)
+            );
             delete_option(AppConstants::OPT_ACTIVATED);
             flush_rewrite_rules();
         }
     }
 
+    /**
+     * Load admin or public assets
+     * @return void 
+     */
     public static function LoadAssets():void
     {        
         add_action('admin_enqueue_scripts', function(){
