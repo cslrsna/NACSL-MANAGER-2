@@ -2,4 +2,7 @@
 
 namespace NACSL\Utilities;
 
-interface IHookAdmin extends IHook{}
+interface IHookAdmin
+{
+    public function AdminHook():void;
+};

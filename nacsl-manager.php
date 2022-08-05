@@ -32,6 +32,10 @@ if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
 use NACSL\App;
+use NACSL\Controllers\CptGroups;
+use NACSL\Controllers\CptMeetings;
+use NACSL\Controllers\CptSubCom;
+use NACSL\Services\CptService;
 use NACSL\Services\StartupService;
 use NACSL\Utilities\AppConstants;
 use Timber\Timber;
@@ -55,6 +59,12 @@ AppConstants::$data = get_plugin_data(__file__);
 AppConstants::$version = AppConstants::$data['Version'];
 
 Timber::$locations = __DIR__ . "/includes/Views";
+
+StartupService::$colCustomPostType = array(
+    new CptGroups(new CptService()),
+    new CptMeetings(new CptService()),
+    new CptSubCom(new CptService()),
+);
 
 register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [StartupService::class, 'Deactivate'] );

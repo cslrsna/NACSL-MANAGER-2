@@ -1,6 +1,11 @@
 <?php
 namespace NACSL;
 
+use NACSL\Controllers\AdminMain;
+use NACSL\Controllers\CptGroups;
+use NACSL\Controllers\IAdminController;
+use NACSL\Models\ViewModels\AdminMainVM;
+use NACSL\Services\CptService;
 use NACSL\Services\StartupService;
 
 /**
@@ -10,8 +15,6 @@ use NACSL\Services\StartupService;
 final class App
 {
     private static $_instance;
-
-    private function __construct(){}
 
     /**
      * Get instance of NACSL-MANAGER App
@@ -29,9 +32,14 @@ final class App
      */
     public function Init()
     {
+        // Startup
         StartupService::LoadAssets();
         StartupService::Dependencies();
         StartupService::Update();
         StartupService::IsInstall();
+        
+        foreach (StartupService::$colCustomPostType as $cpt) {
+            $cpt->Hook();
+        }
     }
 }

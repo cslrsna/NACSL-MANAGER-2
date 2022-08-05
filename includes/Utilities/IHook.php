@@ -2,6 +2,7 @@
 
 namespace NACSL\Utilities;
 
-interface IHook{
+interface IHook
+{
     public function Hook():void;
 };
