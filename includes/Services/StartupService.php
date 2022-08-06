@@ -12,7 +12,7 @@ use NACSL\Utilities\EnumAdminNoticeType;
  */
 final class StartupService
 {
-    public static array $colCustomPostType = array();
+    public static array $colRegister = array();
     /**
      * Activate NACSL-MANAGER
      * @return void 
@@ -23,7 +23,7 @@ final class StartupService
         if( !get_option(AppConstants::OPT_VERSION))
             update_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
 
-        foreach (self::$colCustomPostType as $cpt) {
+        foreach (self::$colRegister as $cpt) {
             $cpt->Register();
         }       
 
@@ -40,7 +40,7 @@ final class StartupService
         AuthorizationService::ActivateDeactivatePluginsAllowed($_REQUEST['action'], $_REQUEST['_wpnonce']);
         update_option(AppConstants::OPT_ACTIVATED, false);
 
-        foreach (self::$colCustomPostType as $cpt) {
+        foreach (self::$colRegister as $cpt) {
             $cpt->Unregister();
         }
 

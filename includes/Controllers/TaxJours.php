@@ -1,15 +1,14 @@
 <?php
 namespace NACSL\Controllers;
 
-use NACSL\Models\CustomPostType as CptModel;
 use NACSL\Services\ITaxService;
 
-class CptGroups extends CustomTaxonomy
+class TaxJours extends CustomTaxonomy
 {
-    public function __construct(ITaxService $taxServ, array|CptModel $objType)
+    /* public function __construct(ITaxService $taxServ, array|string $objType)
     {
         parent::__construct($taxServ, $objType);
-    }
+    } */
 
     public function Unregister(): void 
     { 
@@ -18,7 +17,7 @@ class CptGroups extends CustomTaxonomy
     
     public function Register(): void 
     {
-        register_taxonomy($this->model->name, $this->model->ToArray());
+        register_taxonomy($this->model->name, $this->objType, $this->model->ToArray());
     }
 
     public function AdminMenu(): void { }

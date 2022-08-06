@@ -35,8 +35,10 @@ use NACSL\App;
 use NACSL\Controllers\CptGroups;
 use NACSL\Controllers\CptMeetings;
 use NACSL\Controllers\CptSubCom;
+use NACSL\Controllers\TaxJours;
 use NACSL\Services\CptService;
 use NACSL\Services\StartupService;
+use NACSL\Services\TaxService;
 use NACSL\Utilities\AppConstants;
 use Timber\Timber;
 
@@ -60,10 +62,11 @@ AppConstants::$version = AppConstants::$data['Version'];
 
 Timber::$locations = __DIR__ . "/includes/Views";
 
-StartupService::$colCustomPostType = array(
+StartupService::$colRegister = array(
     new CptGroups(new CptService()),
     new CptMeetings(new CptService()),
     new CptSubCom(new CptService()),
+    new TaxJours(new TaxService(), strtolower(AppConstants::PREFIX . 'CptMeetings'))
 );
 
 register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );

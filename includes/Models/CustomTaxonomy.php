@@ -67,9 +67,9 @@ abstract class CustomTaxonomy
     {
         $arr = array();
         foreach ($this as $key => $value) {
-            if( gettype($value) === CptLabelsVM::class )
+            if( gettype($value) === TaxLabelsVM::class)
                 $arr[$key] = $value->toArray();
-            else
+            else if( $value != null )
                 $arr[$key] = $value;
         }
         return $arr;
