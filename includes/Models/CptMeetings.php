@@ -1,12 +1,12 @@
 <?php
 namespace NACSL\Models;
 
-use NACSL\Models\ViewModels\CptLabelsVm;
+use NACSL\Models\ViewModels\CptLabelsVM;
 use NACSL\Utilities\AppConstants;
 
 class CptMeetings extends CustomPostType
 {
-    public function __construct(string $name, CptLabelsVm $labels)
+    public function __construct(string $name, CptLabelsVM $labels)
     {
         $this->name = AppConstants::PREFIX . $name;
         $this->labels = $labels;

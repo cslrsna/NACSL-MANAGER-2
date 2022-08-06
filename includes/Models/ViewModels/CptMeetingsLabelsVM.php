@@ -3,7 +3,7 @@ namespace NACSL\Models\ViewModels;
 
 use NACSL\Utilities\AppConstants;
 
-class CptMeetingsLabelsVM extends CptLabelsVm
+class CptMeetingsLabelsVM extends CptLabelsVM
 {
     public function __construct()
     {
