@@ -5,13 +5,18 @@ use NACSL\Models\CustomTaxonomy as ModelsCustomTaxonomy;
 use NACSL\Services\ITaxService;
 
 /**
- * Custom taxonomy builder
+ * Generic custom taxonomy controller
  * @package NACSL\Controllers
  */
 abstract class CustomTaxonomy implements ITaxController
 {
     protected ITaxService $_taxServ;
     public ModelsCustomTaxonomy $model;
+
+    /**
+     * Custom post type linked to the taxonomy.
+     * @var array|string
+     */
     public array|string $objType;
 
     public function __construct(ITaxService $taxServ, array|string $objType)
@@ -22,7 +27,7 @@ abstract class CustomTaxonomy implements ITaxController
         $this->objType = $this->_taxServ->GetObjectType($objType);
     }
 
-    
+
     public function Register(): void 
     {
         register_taxonomy($this->model->taxonomy, $this->objType, $this->model->ToArray());
@@ -32,6 +37,14 @@ abstract class CustomTaxonomy implements ITaxController
     { 
         unregister_post_type($this->model->taxonomy);
     }
+
+    public function AdminMenu(): void { }
+
+    public function Options(): void { }
+
+    public function AdminHook(): void { }
+
+    public function PublicHook(): void { }
 
     public function Hook(): void 
     { 

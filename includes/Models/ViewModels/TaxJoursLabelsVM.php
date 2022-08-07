@@ -8,8 +8,8 @@ class TaxJoursLabelsVM extends TaxLabelsVM
     public function __construct()
     {
         $td = AppConstants::TEXT_DOMAIN;
-        $this->name =                       __("Jours", $td);
-        $this->singular_name =              __("Jour", $td);
+        $this->name =                       __("Jours de semaine", $td);
+        $this->singular_name =              __("Jour des semaine", $td);
         $this->search_items =               __("Recherche par jour", $td);
         $this->popular_items =              __("Jours populaires", $td);
         $this->all_items =                  __("Tous les jours", $td);

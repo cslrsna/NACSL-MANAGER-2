@@ -12,7 +12,7 @@ use NACSL\Utilities\AppConstants;
 abstract class CustomTaxonomy
 {
     /**
-     *  (Required) Taxonomy key, must not exceed 32 characters.
+     *  (Required) Taxonomy key, must not exceed 32 characters. It's automatically generated with the inherited class name.
      * @var string
      */
     public string $taxonomy;
@@ -193,9 +193,12 @@ abstract class CustomTaxonomy
      */
     public bool $_builtin;
 
-    public function __construct()
+    public function __construct(string $name, TaxLabelsVM $labels)
     {
         $this->rest_namespace = rtrim(AppConstants::PREFIX, '_');
+        $this->menu_icon = AppConstants::$adminUrl . "images/logo-na.svg";
+        $this->taxonomy = strtolower(AppConstants::PREFIX . $name);
+        $this->labels = $labels;
     }
 
     /**
@@ -204,13 +207,13 @@ abstract class CustomTaxonomy
      */
     public function ToArray()
     {
-        $arr = array();
+        $args = array();
         foreach ($this as $key => $value) {
             if( gettype($value) === TaxLabelsVM::class)
-                $arr[$key] = $value->toArray();
-            else if( $value != null )
-                $arr[$key] = $value;
+                $args[$key] = $value->toArray();
+            else if( isset($value) )
+                $args[$key] = $value;
         }
-        return $arr;
+        return $args;
     }
 }

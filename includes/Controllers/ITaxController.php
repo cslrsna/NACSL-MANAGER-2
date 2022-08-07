@@ -6,20 +6,20 @@ use NACSL\Utilities\IHookAdmin;
 use NACSL\Utilities\IHookPublic;
 
 /**
- * Basic methods for NACSL\Controller\CustomTaxonomy
+ * Custom taxonomy controller interface
  * @package NACSL\Controllers
  */
 interface ITaxController extends IHook, IHookAdmin, IHookPublic
 {
     /**
-     * Registering method to build the custom taxonomy.
+     * Register custom taxonomy
      * @return void 
      */
     public function Register():void;
 
 
     /**
-     * Unregistering method to erase the custom taxonomy from the wordpress system.
+     * Unregister custom taxonomy
      * @return void 
      */
     public function Unregister():void;

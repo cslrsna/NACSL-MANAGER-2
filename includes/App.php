@@ -38,8 +38,8 @@ final class App
         StartupService::Update();
         StartupService::IsInstall();
         
-        foreach (StartupService::$colRegister as $cpt) {
-            $cpt->Hook();
+        foreach (StartupService::$colRegister as $key => $register) {
+            $register->Hook();
         }
     }
 }

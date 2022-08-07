@@ -4,6 +4,7 @@ namespace NACSL\Models\ViewModels;
 
 /**
  * Representation of all labels that wordpress need to build a custom taxonomy.
+ * @see https://developer.wordpress.org/reference/functions/get_taxonomy_labels/
  * @package NACSL\Models\ViewModels
  */
 abstract class TaxLabelsVM implements IViewModel

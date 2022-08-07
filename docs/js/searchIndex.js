@@ -23,7 +23,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptGroups",
             "name": "CptGroups",
-            "summary": "",
+            "summary": "Custom\u0020post\u0020type\u0020controller\u0020for\u0020the\u0020Area\u0020service\u0020committees\u0020groups.",
             "url": "classes/NACSL-Controllers-CptGroups.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003A__construct\u0028\u0029",
@@ -68,7 +68,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings",
             "name": "CptMeetings",
-            "summary": "",
+            "summary": "Custom\u0020post\u0020type\u0020controller\u0020for\u0020the\u0020Area\u0020service\u0020committees\u0020meetings.",
             "url": "classes/NACSL-Controllers-CptMeetings.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003A__construct\u0028\u0029",
@@ -113,7 +113,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptSubCom",
             "name": "CptSubCom",
-            "summary": "",
+            "summary": "Custom\u0020post\u0020type\u0020controller\u0020for\u0020the\u0020Area\u0020service\u0020committees\u0020sub\u002Dcommitees.",
             "url": "classes/NACSL-Controllers-CptSubCom.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003A__construct\u0028\u0029",
@@ -158,7 +158,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomPostType",
             "name": "CustomPostType",
-            "summary": "",
+            "summary": "Generic\u0020custom\u0020Post\u0020type\u0020controller",
             "url": "classes/NACSL-Controllers-CustomPostType.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003A__construct\u0028\u0029",
@@ -178,28 +178,13 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy",
             "name": "CustomTaxonomy",
-            "summary": "Custom\u0020taxonomy\u0020builder",
+            "summary": "Generic\u0020custom\u0020taxonomy\u0020controller",
             "url": "classes/NACSL-Controllers-CustomTaxonomy.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
             "summary": "",
             "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method___construct"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003ARegister\u0028\u0029",
-            "name": "Register",
-            "summary": "Registering\u0020method\u0020to\u0020build\u0020the\u0020custom\u0020taxonomy.",
-            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Register"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AUnregister\u0028\u0029",
-            "name": "Unregister",
-            "summary": "Unregistering\u0020method\u0020to\u0020erase\u0020the\u0020custom\u0020taxonomy\u0020from\u0020the\u0020wordpress\u0020system.",
-            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Unregister"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AHook\u0028\u0029",
-            "name": "Hook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Hook"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003A\u0024_taxServ",
             "name": "_taxServ",
@@ -213,12 +198,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003A\u0024objType",
             "name": "objType",
-            "summary": "",
+            "summary": "Custom\u0020post\u0020type\u0020linked\u0020to\u0020the\u0020taxonomy.",
             "url": "classes/NACSL-Controllers-CustomTaxonomy.html#property_objType"
         },                {
             "fqsen": "\\NACSL\\Controllers\\IAdminController",
             "name": "IAdminController",
-            "summary": "",
+            "summary": "Interface\u0020for\u0020admin\u0020Hook\u0020exclusively.",
             "url": "classes/NACSL-Controllers-IAdminController.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\IAdminController\u003A\u003AAdminMenu\u0028\u0029",
@@ -228,48 +213,58 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\ICptController",
             "name": "ICptController",
-            "summary": "",
+            "summary": "Custom\u0020Post\u0020type\u0020controller\u0020interface",
             "url": "classes/NACSL-Controllers-ICptController.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003ARegister\u0028\u0029",
             "name": "Register",
-            "summary": "",
+            "summary": "Register\u0020custom\u0020post\u0020type",
             "url": "classes/NACSL-Controllers-ICptController.html#method_Register"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AUnregister\u0028\u0029",
             "name": "Unregister",
-            "summary": "",
+            "summary": "Unregister\u0020custom\u0020post\u0020type",
             "url": "classes/NACSL-Controllers-ICptController.html#method_Unregister"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
-            "summary": "",
+            "summary": "Add\u0020admin\u0020menu",
             "url": "classes/NACSL-Controllers-ICptController.html#method_AdminMenu"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AOptions\u0028\u0029",
             "name": "Options",
-            "summary": "",
+            "summary": "Add\u0020options\u0020to\u0020the\u0020custom\u0020post\u0020type",
             "url": "classes/NACSL-Controllers-ICptController.html#method_Options"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ITaxController",
             "name": "ITaxController",
-            "summary": "Basic\u0020methods\u0020for\u0020NACSL\\Controller\\CustomTaxonomy",
+            "summary": "Custom\u0020taxonomy\u0020controller\u0020interface",
             "url": "classes/NACSL-Controllers-ITaxController.html"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ITaxController\u003A\u003ARegister\u0028\u0029",
             "name": "Register",
-            "summary": "Registering\u0020method\u0020to\u0020build\u0020the\u0020custom\u0020taxonomy.",
+            "summary": "Register\u0020custom\u0020taxonomy",
             "url": "classes/NACSL-Controllers-ITaxController.html#method_Register"
         },                {
             "fqsen": "\\NACSL\\Controllers\\ITaxController\u003A\u003AUnregister\u0028\u0029",
             "name": "Unregister",
-            "summary": "Unregistering\u0020method\u0020to\u0020erase\u0020the\u0020custom\u0020taxonomy\u0020from\u0020the\u0020wordpress\u0020system.",
+            "summary": "Unregister\u0020custom\u0020taxonomy",
             "url": "classes/NACSL-Controllers-ITaxController.html#method_Unregister"
         },                {
             "fqsen": "\\NACSL\\Controllers\\TaxJours",
             "name": "TaxJours",
             "summary": "Taxonomy\u0020\u0022Jours\u0022\u0020is\u0020a\u0020day\u0020tag\u0020for\u0020NACSL\\Controllers\\CptMettings",
             "url": "classes/NACSL-Controllers-TaxJours.html"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003ARegister\u0028\u0029",
+            "name": "Register",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-TaxJours.html#method_Register"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AUnregister\u0028\u0029",
+            "name": "Unregister",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-TaxJours.html#method_Unregister"
         },                {
             "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
@@ -290,6 +285,11 @@ Search.appendIndex(
             "name": "PublicHook",
             "summary": "",
             "url": "classes/NACSL-Controllers-TaxJours.html#method_PublicHook"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AHook\u0028\u0029",
+            "name": "Hook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-TaxJours.html#method_Hook"
         },                {
             "fqsen": "\\NACSL\\Models\\AdminPage",
             "name": "AdminPage",
@@ -1198,7 +1198,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003AAdminHook\u0028\u0029",
             "name": "AdminHook",
-            "summary": "",
+            "summary": "Restricted\u0020hooks\u0020to\u0020admin\u0020only.",
             "url": "classes/NACSL-Utilities-AdminNotice.html#method_AdminHook"
         },                {
             "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003A\u0024_noticeVM",
@@ -1343,32 +1343,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHook",
             "name": "IHook",
-            "summary": "",
+            "summary": "Interface\u0020for\u0020basic\u0020Hook\u0020\u005Badmin\u0020and\u0020public\u005D",
             "url": "classes/NACSL-Utilities-IHook.html"
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHook\u003A\u003AHook\u0028\u0029",
             "name": "Hook",
-            "summary": "",
+            "summary": "No\u0020restricted\u0020hook\u0020\u005Badmin\u0020and\u0020public\u005D",
             "url": "classes/NACSL-Utilities-IHook.html#method_Hook"
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHookAdmin",
             "name": "IHookAdmin",
-            "summary": "",
+            "summary": "Interface\u0020for\u0020admin\u0020Hook\u0020exclusively.",
             "url": "classes/NACSL-Utilities-IHookAdmin.html"
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHookAdmin\u003A\u003AAdminHook\u0028\u0029",
             "name": "AdminHook",
-            "summary": "",
+            "summary": "Restricted\u0020hooks\u0020to\u0020admin\u0020only.",
             "url": "classes/NACSL-Utilities-IHookAdmin.html#method_AdminHook"
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHookPublic",
             "name": "IHookPublic",
-            "summary": "",
+            "summary": "Interface\u0020for\u0020public\u0020Hook\u0020exclusively.",
             "url": "classes/NACSL-Utilities-IHookPublic.html"
         },                {
             "fqsen": "\\NACSL\\Utilities\\IHookPublic\u003A\u003APublicHook\u0028\u0029",
             "name": "PublicHook",
-            "summary": "",
+            "summary": "Restricted\u0020hooks\u0020to\u0020public\u0020only.",
             "url": "classes/NACSL-Utilities-IHookPublic.html#method_PublicHook"
         },                {
             "fqsen": "\\",

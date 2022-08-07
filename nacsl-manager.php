@@ -36,6 +36,7 @@ use NACSL\Controllers\CptGroups;
 use NACSL\Controllers\CptMeetings;
 use NACSL\Controllers\CptSubCom;
 use NACSL\Controllers\TaxJours;
+use NACSL\Controllers\TaxTypes;
 use NACSL\Services\CptService;
 use NACSL\Services\StartupService;
 use NACSL\Services\TaxService;
@@ -62,15 +63,22 @@ AppConstants::$version = AppConstants::$data['Version'];
 
 Timber::$locations = __DIR__ . "/includes/Views";
 
+
 StartupService::$colRegister = array(
-    new CptGroups(new CptService()),
-    new CptMeetings(new CptService()),
-    new CptSubCom(new CptService()),
-    new TaxJours(new TaxService(), 'CptMeetings')
+    'CptGroups' => new CptGroups(new CptService()),
+    'CptMeetings' => new CptMeetings(new CptService()),
+    'CptSubCom' => new CptSubCom(new CptService()),
+    'TaxJours' => new TaxJours(new TaxService(), 'CptMeetings'),
+    'TaxTypes' => new TaxTypes(new TaxService(), 'CptMeetings'),
 );
+
 
 register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [StartupService::class, 'Deactivate'] );
 
 $app = App::GetInstance();
 $app->Init();
+
+/* add_action('wp', function(){
+    exit(var_export(get_taxonomy('nacsl_taxjours')));
+}); */
