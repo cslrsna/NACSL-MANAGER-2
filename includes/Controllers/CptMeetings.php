@@ -44,10 +44,12 @@ class CptMeetings extends CustomPostType
     public function Hook(): void 
     { 
         add_action('init', [$this, 'Register']);
-        add_action('admin_menu', [$this, 'AdminMenu']);
     }
 
-    public function AdminHook(): void { }
+    public function AdminHook(): void 
+    {
+        //add_action('admin_menu', [$this, 'AdminMenu']); 
+    }
 
     public function PublicHook(): void { }
 }

@@ -38,7 +38,7 @@ final class App
         StartupService::Update();
         StartupService::IsInstall();
         
-        foreach (StartupService::$colCustomPostType as $cpt) {
+        foreach (StartupService::$colRegister as $cpt) {
             $cpt->Hook();
         }
     }

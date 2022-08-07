@@ -1,13 +1,13 @@
 <?php
 namespace NACSL\Models;
 
-use NACSL\Models\ViewModels\CptLabelsVm;
+use NACSL\Models\ViewModels\CptLabelsVM;
 use NACSL\Utilities\AppConstants;
 
 abstract class CustomPostType
 {
     public string $name;
-    public CptLabelsVm $labels;
+    public CptLabelsVM $labels;
     public string $description;
     public bool $public  = true;
     public bool $hierarchical = false;
@@ -39,7 +39,7 @@ abstract class CustomPostType
     {
         $arr = array();
         foreach ($this as $key => $value) {
-            if( gettype($value) === CptLabelsVm::class )
+            if( gettype($value) === CptLabelsVM::class )
                 $arr[$key] = $value->toArray();
             else
                 $arr[$key] = $value;

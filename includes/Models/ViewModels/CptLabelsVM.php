@@ -2,7 +2,7 @@
 
 namespace NACSL\Models\ViewModels;
 
-abstract class CptLabelsVm implements IViewModel
+abstract class CptLabelsVM implements IViewModel
 {
     public string $name;
     public string $menu_name;
