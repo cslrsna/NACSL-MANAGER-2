@@ -8,7 +8,7 @@ class TaxJours extends CustomTaxonomy
 {
     public function __construct(string $name, TaxLabelsVM $labels)
     {
-        $this->name = AppConstants::PREFIX . $name;
+        $this->taxonomy = strtolower(AppConstants::PREFIX . $name);
         $this->labels = $labels;
         $this->description = __("Groupes faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "jours";

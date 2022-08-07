@@ -2,6 +2,10 @@
 
 namespace NACSL\Models\ViewModels;
 
+/**
+ * Representation of all labels that wordpress need to build a custom taxonomy.
+ * @package NACSL\Models\ViewModels
+ */
 abstract class TaxLabelsVM implements IViewModel
 {
     /**
@@ -171,4 +175,13 @@ abstract class TaxLabelsVM implements IViewModel
      * @var string
      */
     public string $item_link_description;
+
+    /**
+     * Return this object as an array as wordpress expected it. If properity value is null, the value will has the default value from wordpress system.
+     * @return array 
+     */
+    public function ToArray()
+    {
+        return (array) $this;
+    }
 }

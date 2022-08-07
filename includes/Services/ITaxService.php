@@ -7,5 +7,5 @@ use NACSL\Models\CustomTaxonomy;
 interface ITaxService
 {
     public function GetModel(string $name):CustomTaxonomy;
-    public function GetObjectType(array|CustomPostType $objType):mixed;
+    public function GetObjectType(array|string $objType):mixed;
 }

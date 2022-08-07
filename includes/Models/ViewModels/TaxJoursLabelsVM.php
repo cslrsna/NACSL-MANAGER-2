@@ -37,10 +37,5 @@ class TaxJoursLabelsVM extends TaxLabelsVM
         $this->item_link =                  __("Hyperlien du jour", $td);
         $this->item_link_description =      __("Hyperlien vers le jour", $td);
     }
-
-    public function ToArray()
-    {
-        return (array) $this;
-    }
     
 }

@@ -66,7 +66,7 @@ StartupService::$colRegister = array(
     new CptGroups(new CptService()),
     new CptMeetings(new CptService()),
     new CptSubCom(new CptService()),
-    new TaxJours(new TaxService(), strtolower(AppConstants::PREFIX . 'CptMeetings'))
+    new TaxJours(new TaxService(), 'CptMeetings')
 );
 
 register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );

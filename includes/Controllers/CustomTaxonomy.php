@@ -15,6 +15,22 @@ abstract class CustomTaxonomy implements ITaxController
         $this->_taxServ = $taxServ;
         $taxName = explode('\\',$this::class);
         $this->model = $this->_taxServ->GetModel(end($taxName));
-        $this->objType = $objType;
+        $this->objType = $this->_taxServ->GetObjectType($objType);
+    }
+
+    
+    public function Register(): void 
+    {
+        register_taxonomy($this->model->taxonomy, $this->objType, $this->model->ToArray());
+    }
+
+    public function Unregister(): void 
+    { 
+        unregister_post_type($this->model->taxonomy);
+    }
+
+    public function Hook(): void 
+    { 
+        add_action('init', [$this, 'Register']);
     }
 }

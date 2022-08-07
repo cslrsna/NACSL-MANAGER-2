@@ -1,24 +1,24 @@
 <?php
 namespace NACSL\Services;
 
-use NACSL\Models\CustomPostType;
 use NACSL\Models\CustomTaxonomy;
+use NACSL\Utilities\AppConstants;
 
 class TaxService implements ITaxService
 {
 
-    public function GetObjectType(array|CustomPostType $objType): mixed
+    public function GetObjectType(array|string $objType): mixed
     { 
         $strObjType = array();
-        if( gettype($objType) == CustomPostType::class )
+        if( gettype($objType) == 'array')
         {
             foreach ($objType as $obj) {
-                $strObjType[] = $obj->name;
+                $strObjType[] = strtolower(AppConstants::PREFIX . $obj);
             }            
         }
-        else
+        else if(gettype($objType) == 'string')
         {
-            $strObjType[] = $objType->name;
+            $strObjType[] = strtolower(AppConstants::PREFIX . $objType);
         }
         return $strObjType;
     }
