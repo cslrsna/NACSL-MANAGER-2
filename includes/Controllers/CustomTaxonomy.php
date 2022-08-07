@@ -4,6 +4,10 @@ namespace NACSL\Controllers;
 use NACSL\Models\CustomTaxonomy as ModelsCustomTaxonomy;
 use NACSL\Services\ITaxService;
 
+/**
+ * Custom taxonomy builder
+ * @package NACSL\Controllers
+ */
 abstract class CustomTaxonomy implements ITaxController
 {
     protected ITaxService $_taxServ;

@@ -2,7 +2,6 @@
 namespace NACSL\Controllers;
 
 use NACSL\Services\ICptService;
-use NACSL\Utilities\AppConstants;
 
 class CptMeetings extends CustomPostType
 {
