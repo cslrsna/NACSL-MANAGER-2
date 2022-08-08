@@ -12,12 +12,14 @@ abstract class CustomPostType implements ICptController
 {
     protected ICptService $_CptServ;
     public ModelsCustomPostType $model;
+    public string $name;
     
     public function __construct(ICptService $cptServ)
     {
         $this->_CptServ = $cptServ;
         $cptName = explode('\\',$this::class);
         $this->model = $this->_CptServ->GetModel(end($cptName));
+        $this->name = $this->model->post_type;
     }
 
 
@@ -47,10 +49,6 @@ abstract class CustomPostType implements ICptController
     { 
         add_action('init', [$this, 'Register']);
     }
-
-    public function AdminMenu(): void { }
-
-    public function Options(): void { }
 
     public function AdminHook(): void { }
 

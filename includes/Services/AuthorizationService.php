@@ -28,6 +28,12 @@ final class AuthorizationService
             exit(__(self::NOT_AUTHORIZED, AppConstants::TEXT_DOMAIN));
     }
 
+    public static function AdminCanManageOption()
+    {
+        if( !self::AdminCanDo('manage_option')) 
+            exit(__(self::NOT_AUTHORIZED, AppConstants::TEXT_DOMAIN));
+    }
+
     private static function AdminCanDo(string $cap):bool
     {
         $user = wp_get_current_user();
