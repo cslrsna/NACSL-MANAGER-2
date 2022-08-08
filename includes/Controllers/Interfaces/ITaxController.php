@@ -1,13 +1,13 @@
 <?php
-namespace NACSL\Controllers;
+namespace NACSL\Controllers\Interfaces;
 
-use NACSL\Utilities\IHook;
-use NACSL\Utilities\IHookAdmin;
-use NACSL\Utilities\IHookPublic;
+use NACSL\Utilities\Interfaces\IHook;
+use NACSL\Utilities\Interfaces\IHookAdmin;
+use NACSL\Utilities\Interfaces\IHookPublic;
 
 /**
  * Custom taxonomy controller interface
- * @package NACSL\Controllers
+ * @package NACSL\Controllers\Interfaces
  */
 interface ITaxController extends IHook, IHookAdmin, IHookPublic
 {

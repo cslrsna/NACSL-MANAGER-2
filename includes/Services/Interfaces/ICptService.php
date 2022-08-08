@@ -1,5 +1,5 @@
 <?php
-namespace NACSL\Services;
+namespace NACSL\Services\Interfaces;
 
 use NACSL\Models\CustomPostType;
 

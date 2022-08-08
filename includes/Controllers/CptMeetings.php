@@ -1,7 +1,7 @@
 <?php
 namespace NACSL\Controllers;
 
-use NACSL\Services\ICptService;
+use NACSL\Services\Interfaces\ICptService;
 use Timber\Timber;
 
 /**

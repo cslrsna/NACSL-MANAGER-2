@@ -1,10 +1,10 @@
 <?php
 
-namespace NACSL\Utilities;
+namespace NACSL\Utilities\Interfaces;
 
 /**
  * Interface for public Hook exclusively.
- * @package NACSL\Utilities
+ * @package NACSL\Utilities\Interfaces
  */
 interface IHookPublic
 {

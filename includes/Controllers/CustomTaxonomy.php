@@ -1,8 +1,9 @@
 <?php
 namespace NACSL\Controllers;
 
+use NACSL\Controllers\Interfaces\ITaxController;
 use NACSL\Models\CustomTaxonomy as ModelsCustomTaxonomy;
-use NACSL\Services\ITaxService;
+use NACSL\Services\Interfaces\ITaxService;
 
 /**
  * Generic custom taxonomy controller
