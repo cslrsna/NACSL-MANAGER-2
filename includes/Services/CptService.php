@@ -2,6 +2,7 @@
 namespace NACSL\Services;
 
 use NACSL\Models\CustomPostType as CptModel;
+use NACSL\Services\Interfaces\ICptService;
 
 class CptService implements ICptService
 {
