@@ -40,6 +40,8 @@ final class App
         
         foreach (StartupService::$colRegister as $key => $register) {
             $register->Hook();
+            $register->AdminHook();
+            $register->PublicHook();
         }
     }
 }

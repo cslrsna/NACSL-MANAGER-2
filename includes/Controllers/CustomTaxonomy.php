@@ -42,7 +42,9 @@ abstract class CustomTaxonomy implements ITaxController
 
     public function Options(): void { }
 
-    public function AdminHook(): void { }
+    public function AdminHook(): void 
+    {
+    }
 
     public function PublicHook(): void { }
 
