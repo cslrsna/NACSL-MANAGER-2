@@ -2,6 +2,7 @@
 
 namespace NACSL\Models\ViewModels;
 
+use NACSL\Models\ViewModels\Interfaces\IViewModel;
 use NACSL\Utilities\EnumAdminNoticeType;
 
 class AdminNoticeVM implements IViewModel

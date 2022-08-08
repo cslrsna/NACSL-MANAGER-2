@@ -3,7 +3,7 @@ namespace NACSL;
 
 use NACSL\Controllers\AdminMain;
 use NACSL\Controllers\CptGroups;
-use NACSL\Controllers\IAdminController;
+use NACSL\Controllers\Interfaces\IAdminController;
 use NACSL\Models\ViewModels\AdminMainVM;
 use NACSL\Services\CptService;
 use NACSL\Services\StartupService;

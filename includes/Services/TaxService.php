@@ -2,6 +2,7 @@
 namespace NACSL\Services;
 
 use NACSL\Models\CustomTaxonomy;
+use NACSL\Services\Interfaces\ITaxService;
 use NACSL\Utilities\AppConstants;
 
 class TaxService implements ITaxService

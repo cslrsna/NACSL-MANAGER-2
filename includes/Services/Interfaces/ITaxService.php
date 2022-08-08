@@ -1,11 +1,11 @@
 <?php
-namespace NACSL\Services;
+namespace NACSL\Services\Interfaces;
 
 use NACSL\Models\CustomTaxonomy;
 
 /**
  * Basic service methods for NACSL\Controller\CustomTaxonomy
- * @package NACSL\Services
+ * @package NACSL\Services\Interfaces
  */
 interface ITaxService
 {

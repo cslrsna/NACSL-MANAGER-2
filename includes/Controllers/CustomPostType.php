@@ -1,8 +1,9 @@
 <?php
 namespace NACSL\Controllers;
 
+use NACSL\Controllers\Interfaces\ICptController;
 use NACSL\Models\CustomPostType as ModelsCustomPostType;
-use NACSL\Services\ICptService;
+use NACSL\Services\Interfaces\ICptService;
 
 /**
  * Generic custom Post type controller

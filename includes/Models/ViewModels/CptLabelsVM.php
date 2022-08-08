@@ -2,6 +2,8 @@
 
 namespace NACSL\Models\ViewModels;
 
+use NACSL\Models\ViewModels\Interfaces\IViewModel;
+
 /**
  * Representation of all labels that wordpress need to build a custom post type.
  * @see https://developer.wordpress.org/reference/functions/get_post_type_labels/

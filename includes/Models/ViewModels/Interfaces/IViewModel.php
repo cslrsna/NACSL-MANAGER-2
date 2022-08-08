@@ -1,5 +1,5 @@
 <?php
-namespace NACSL\Models\ViewModels;
+namespace NACSL\Models\ViewModels\Interfaces;
 
 interface IViewModel
 {   
