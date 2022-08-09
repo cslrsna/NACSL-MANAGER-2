@@ -136,27 +136,43 @@
             <div class="phpdocumentor-element__package">
             in package
             <ul class="phpdocumentor-breadcrumbs">
-                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/NACSL.html">NACSL</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/NACSL-Models.html">Models</a></li>
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/NACSL-Models-ViewModels.html">ViewModels</a></li>
                             </ul>
         </div>
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/NACSL-Models-ViewModels-IViewModel.html"><abbr title="\NACSL\Models\ViewModels\IViewModel">IViewModel</abbr></a>                    </span>
+                            <a href="classes/NACSL-Models-ViewModels-Interfaces-IViewModel.html"><abbr title="\NACSL\Models\ViewModels\Interfaces\IViewModel">IViewModel</abbr></a>                    </span>
     
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
-    <section class="phpdocumentor-description"></section>
+            <p class="phpdocumentor-summary">Representation of all labels that wordpress need to build a custom post type.</p>
 
 
+
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/reference/functions/get_post_type_labels/"><abbr title="https://developer.wordpress.org/reference/functions/get_post_type_labels/">https://developer.wordpress.org/reference/functions/get_post_type_labels/</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
 
 
 
@@ -167,7 +183,7 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/NACSL-Models-ViewModels-IViewModel.html"><abbr title="\NACSL\Models\ViewModels\IViewModel">IViewModel</abbr></a></dt>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/NACSL-Models-ViewModels-Interfaces-IViewModel.html"><abbr title="\NACSL\Models\ViewModels\Interfaces\IViewModel">IViewModel</abbr></a></dt>
         <dd></dd>
     
     
@@ -186,231 +202,231 @@
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Default is ‘Add New’ for both hierarchical and non-hierarchical types. When internationalizing this string, please use a gettext context matching your post type. Example: _x( &#039;Add New&#039;, &#039;product&#039;, &#039;textdomain&#039; );.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_add_new_item">$add_new_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for adding a new singular item. Default is ‘Add New Post’ / ‘Add New Page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_all_items">$all_items</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label to signify all items in a submenu link. Default is ‘All Posts’ / ‘All Pages’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_archives">$archives</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for archives in nav menus. Default is ‘Post Archives’ / ‘Page Archives’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_attributes">$attributes</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the attributes meta box. Default is ‘Post Attributes’ / ‘Page</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_edit_item">$edit_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for editing a singular item. Default is ‘Edit Post’ / ‘Edit Page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_featured_image">$featured_image</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the featured image meta box title. Default is ‘Featured image’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_filter_by_date">$filter_by_date</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the date filter in list tables. Default is ‘Filter by date’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_filter_items_list">$filter_items_list</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the table views hidden heading. Default is ‘Filter posts list’ / ‘Filter pages list’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_insert_into_item">$insert_into_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the media frame button. Default is ‘Insert into post’ / ‘Insert into page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_link">$item_link</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Title for a navigation link block variation. Default is ‘Post Link’ / ‘Page Link’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_link_description">$item_link_description</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Description for a navigation link block variation. Default is ‘A link to a post.’ / ‘A link to a page.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_published">$item_published</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when an item is published. Default is ‘Post published.’ / ‘Page published.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_published_privately">$item_published_privately</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when an item is published with private visibility. Default is ‘Post published privately.’ / ‘Page published privately.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_reverted_to_draft">$item_reverted_to_draft</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when an item is switched to a draft. Default is ‘Post reverted to draft.’ / ‘Page reverted to draft.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_scheduled">$item_scheduled</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when an item is scheduled for publishing. Default is ‘Post scheduled.’ / ‘Page scheduled.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_updated">$item_updated</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when an item is updated. Default is ‘Post updated.’ / ‘Page updated.’</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_items_list">$items_list</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the table hidden heading. Default is ‘Posts list’ / ‘Pages list’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_items_list_navigation">$items_list_navigation</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the table pagination hidden heading. Default is ‘Posts list navigation’ / ‘Pages list navigation’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_menu_name">$menu_name</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the menu name. Default is the same as name.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_name">$name</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>General name for the post type, usually plural. The same and overridden by $post_type_object-&gt;label. Default is ‘Posts’ / ‘Pages’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_new_item">$new_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the new item page title. Default is ‘New Post’ / ‘New Page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_not_found">$not_found</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when no items are found. Default is ‘No posts found’ / ‘No pages found’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_not_found_in_trash">$not_found_in_trash</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used when no items are in the Trash. Default is ‘No posts found in Trash’ / ‘No pages found in Trash’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_parent_item_colon">$parent_item_colon</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label used to prefix parents of hierarchical items. Not used on non-hierarchical post types. Default is ‘Parent Page:’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_remove_featured_image">$remove_featured_image</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for removing the featured image. Default is ‘Remove featured image’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_search_items">$search_items</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for searching plural items. Default is ‘Search Posts’ / ‘Search Pages’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_set_featured_image">$set_featured_image</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for setting the featured image. Default is ‘Set featured image’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_singular_name">$singular_name</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Name for one object of this post type. Default is ‘Post’ / ‘Page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_uploaded_to_this_item">$uploaded_to_this_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for the media frame filter. Default is ‘Uploaded to this post’ / ‘Uploaded to this page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_use_featured_image">$use_featured_image</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label in the media frame for using a featured image. Default is ‘Use as featured image’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_view_item">$view_item</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for viewing a singular item. Default is ‘View Post’ / ‘View Page’.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -public">
     <a href="classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_view_items">$view_items</a>
     <span>
                         &nbsp;: string            </span>
 </dt>
-<dd></dd>
+<dd>Label for viewing post type archives. Default is ‘View Posts’ / ‘View Pages’.</dd>
 
             </dl>
 
@@ -440,22 +456,35 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Default is ‘Add New’ for both hierarchical and non-hierarchical types. When internationalizing this string, please use a gettext context matching your post type. Example: _x( &#039;Add New&#039;, &#039;product&#039;, &#039;textdomain&#039; );.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$add_new</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
     
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="https://developer.wordpress.org/plugins/internationalization/how-to-internationalize-your-plugin/#disambiguation-by-context"><abbr title="https://developer.wordpress.org/plugins/internationalization/how-to-internationalize-your-plugin/#disambiguation-by-context">https://developer.wordpress.org/plugins/internationalization/how-to-internationalize-your-plugin/#disambiguation-by-context</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
 
 </article>
                     <article
@@ -474,21 +503,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">37</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for adding a new singular item. Default is ‘Add New Post’ / ‘Add New Page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$add_new_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -508,21 +536,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">20</span>
+    <span class="phpdocumentor-element-found-in__line">92</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label to signify all items in a submenu link. Default is ‘All Posts’ / ‘All Pages’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$all_items</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -542,21 +569,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">21</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for archives in nav menus. Default is ‘Post Archives’ / ‘Page Archives’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$archives</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -576,21 +602,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">22</span>
+    <span class="phpdocumentor-element-found-in__line">104</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the attributes meta box. Default is ‘Post Attributes’ / ‘Page</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$attributes</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -610,21 +635,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for editing a singular item. Default is ‘Edit Post’ / ‘Edit Page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$edit_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -644,21 +668,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the featured image meta box title. Default is ‘Featured image’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$featured_image</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -678,21 +701,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">158</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the date filter in list tables. Default is ‘Filter by date’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$filter_by_date</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -712,21 +734,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">152</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the table views hidden heading. Default is ‘Filter posts list’ / ‘Filter pages list’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$filter_items_list</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -746,21 +767,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">110</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the media frame button. Default is ‘Insert into post’ / ‘Insert into page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$insert_into_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -780,21 +800,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">38</span>
+    <span class="phpdocumentor-element-found-in__line">206</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Title for a navigation link block variation. Default is ‘Post Link’ / ‘Page Link’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_link</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -814,21 +833,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">39</span>
+    <span class="phpdocumentor-element-found-in__line">211</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Description for a navigation link block variation. Default is ‘A link to a post.’ / ‘A link to a page.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_link_description</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -848,21 +866,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">33</span>
+    <span class="phpdocumentor-element-found-in__line">176</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when an item is published. Default is ‘Post published.’ / ‘Page published.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_published</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -882,21 +899,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">182</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when an item is published with private visibility. Default is ‘Post published privately.’ / ‘Page published privately.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_published_privately</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -916,21 +932,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">188</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when an item is switched to a draft. Default is ‘Post reverted to draft.’ / ‘Page reverted to draft.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_reverted_to_draft</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -950,21 +965,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">36</span>
+    <span class="phpdocumentor-element-found-in__line">194</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when an item is scheduled for publishing. Default is ‘Post scheduled.’ / ‘Page scheduled.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_scheduled</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -984,21 +998,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">37</span>
+    <span class="phpdocumentor-element-found-in__line">200</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when an item is updated. Default is ‘Post updated.’ / ‘Page updated.’</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$item_updated</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1018,21 +1031,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">32</span>
+    <span class="phpdocumentor-element-found-in__line">170</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the table hidden heading. Default is ‘Posts list’ / ‘Pages list’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$items_list</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1052,21 +1064,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the table pagination hidden heading. Default is ‘Posts list navigation’ / ‘Pages list navigation’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$items_list_navigation</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1086,21 +1097,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">146</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the menu name. Default is the same as name.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$menu_name</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1120,21 +1130,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">7</span>
+    <span class="phpdocumentor-element-found-in__line">18</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">General name for the post type, usually plural. The same and overridden by $post_type_object-&gt;label. Default is ‘Posts’ / ‘Pages’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$name</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1154,21 +1163,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">49</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the new item page title. Default is ‘New Post’ / ‘New Page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$new_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1188,21 +1196,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">74</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when no items are found. Default is ‘No posts found’ / ‘No pages found’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$not_found</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1222,21 +1229,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">80</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used when no items are in the Trash. Default is ‘No posts found in Trash’ / ‘No pages found in Trash’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$not_found_in_trash</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1256,21 +1262,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">86</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label used to prefix parents of hierarchical items. Not used on non-hierarchical post types. Default is ‘Parent Page:’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$parent_item_colon</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1290,21 +1295,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">27</span>
+    <span class="phpdocumentor-element-found-in__line">134</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for removing the featured image. Default is ‘Remove featured image’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$remove_featured_image</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1324,21 +1328,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">68</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for searching plural items. Default is ‘Search Posts’ / ‘Search Pages’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$search_items</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1358,21 +1361,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">26</span>
+    <span class="phpdocumentor-element-found-in__line">128</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for setting the featured image. Default is ‘Set featured image’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$set_featured_image</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1392,21 +1394,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">24</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Name for one object of this post type. Default is ‘Post’ / ‘Page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$singular_name</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1426,21 +1427,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">116</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for the media frame filter. Default is ‘Uploaded to this post’ / ‘Uploaded to this page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$uploaded_to_this_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1460,21 +1460,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">140</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label in the media frame for using a featured image. Default is ‘Use as featured image’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$use_featured_image</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1494,21 +1493,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for viewing a singular item. Default is ‘View Post’ / ‘View Page’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$view_item</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>
@@ -1528,21 +1526,20 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Models/ViewModels/CptLabelsVM.php"><a href="files/includes-models-viewmodels-cptlabelsvm.html"><abbr title="includes/Models/ViewModels/CptLabelsVM.php">CptLabelsVM.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">15</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Label for viewing post type archives. Default is ‘View Posts’ / ‘View Pages’.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
         <span class="phpdocumentor-signature__type">string</span>
     <span class="phpdocumentor-signature__name">$view_items</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
+    
+    
     
 
 </article>

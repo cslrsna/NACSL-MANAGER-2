@@ -26,21 +26,6 @@ Search.appendIndex(
             "summary": "Custom\u0020post\u0020type\u0020controller\u0020for\u0020the\u0020Area\u0020service\u0020committees\u0020groups.",
             "url": "classes/NACSL-Controllers-CptGroups.html"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method___construct"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003AUnregister\u0028\u0029",
-            "name": "Unregister",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method_Unregister"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003ARegister\u0028\u0029",
-            "name": "Register",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method_Register"
-        },                {
             "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
             "summary": "",
@@ -50,21 +35,6 @@ Search.appendIndex(
             "name": "Options",
             "summary": "",
             "url": "classes/NACSL-Controllers-CptGroups.html#method_Options"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003AHook\u0028\u0029",
-            "name": "Hook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method_Hook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003AAdminHook\u0028\u0029",
-            "name": "AdminHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method_AdminHook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptGroups\u003A\u003APublicHook\u0028\u0029",
-            "name": "PublicHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptGroups.html#method_PublicHook"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings",
             "name": "CptMeetings",
@@ -78,13 +48,8 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003AUnregister\u0028\u0029",
             "name": "Unregister",
-            "summary": "",
+            "summary": "All\u0020unregister\u0020logic\u0020for\u0020all\u0020costom\u0020post\u0020type",
             "url": "classes/NACSL-Controllers-CptMeetings.html#method_Unregister"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003ARegister\u0028\u0029",
-            "name": "Register",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptMeetings.html#method_Register"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
@@ -96,40 +61,30 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Controllers-CptMeetings.html#method_Options"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003AHook\u0028\u0029",
-            "name": "Hook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptMeetings.html#method_Hook"
-        },                {
             "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003AAdminHook\u0028\u0029",
             "name": "AdminHook",
             "summary": "",
             "url": "classes/NACSL-Controllers-CptMeetings.html#method_AdminHook"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003APublicHook\u0028\u0029",
-            "name": "PublicHook",
+            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003A\u0024optGroupSlug",
+            "name": "optGroupSlug",
             "summary": "",
-            "url": "classes/NACSL-Controllers-CptMeetings.html#method_PublicHook"
+            "url": "classes/NACSL-Controllers-CptMeetings.html#property_optGroupSlug"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003A\u0024optNameJours",
+            "name": "optNameJours",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CptMeetings.html#property_optNameJours"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CptMeetings\u003A\u003A\u0024optGroup",
+            "name": "optGroup",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CptMeetings.html#property_optGroup"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptSubCom",
             "name": "CptSubCom",
             "summary": "Custom\u0020post\u0020type\u0020controller\u0020for\u0020the\u0020Area\u0020service\u0020committees\u0020sub\u002Dcommitees.",
             "url": "classes/NACSL-Controllers-CptSubCom.html"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method___construct"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003AUnregister\u0028\u0029",
-            "name": "Unregister",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method_Unregister"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003ARegister\u0028\u0029",
-            "name": "Register",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method_Register"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
@@ -141,21 +96,6 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Controllers-CptSubCom.html#method_Options"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003AHook\u0028\u0029",
-            "name": "Hook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method_Hook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003AAdminHook\u0028\u0029",
-            "name": "AdminHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method_AdminHook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\CptSubCom\u003A\u003APublicHook\u0028\u0029",
-            "name": "PublicHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-CptSubCom.html#method_PublicHook"
-        },                {
             "fqsen": "\\NACSL\\Controllers\\CustomPostType",
             "name": "CustomPostType",
             "summary": "Generic\u0020custom\u0020Post\u0020type\u0020controller",
@@ -165,6 +105,31 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/NACSL-Controllers-CustomPostType.html#method___construct"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003AUnregister\u0028\u0029",
+            "name": "Unregister",
+            "summary": "All\u0020unregister\u0020logic\u0020for\u0020all\u0020costom\u0020post\u0020type",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#method_Unregister"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003ARegister\u0028\u0029",
+            "name": "Register",
+            "summary": "All\u0020register\u0020logic\u0020for\u0020all\u0020costom\u0020post\u0020type",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#method_Register"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003AHook\u0028\u0029",
+            "name": "Hook",
+            "summary": "No\u0020restricted\u0020hook\u0020\u005Badmin\u0020and\u0020public\u005D\u0020for\u0020all\u0020custom\u0020post\u0020type",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#method_Hook"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003AAdminHook\u0028\u0029",
+            "name": "AdminHook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#method_AdminHook"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003APublicHook\u0028\u0029",
+            "name": "PublicHook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#method_PublicHook"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003A\u0024_CptServ",
             "name": "_CptServ",
@@ -176,6 +141,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Controllers-CustomPostType.html#property_model"
         },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomPostType\u003A\u003A\u0024slug",
+            "name": "slug",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomPostType.html#property_slug"
+        },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy",
             "name": "CustomTaxonomy",
             "summary": "Generic\u0020custom\u0020taxonomy\u0020controller",
@@ -185,6 +155,41 @@ Search.appendIndex(
             "name": "__construct",
             "summary": "",
             "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method___construct"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003ARegister\u0028\u0029",
+            "name": "Register",
+            "summary": "Register\u0020custom\u0020taxonomy",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Register"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AUnregister\u0028\u0029",
+            "name": "Unregister",
+            "summary": "Unregister\u0020custom\u0020taxonomy",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Unregister"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AAdminMenu\u0028\u0029",
+            "name": "AdminMenu",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_AdminMenu"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AOptions\u0028\u0029",
+            "name": "Options",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Options"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AAdminHook\u0028\u0029",
+            "name": "AdminHook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_AdminHook"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003APublicHook\u0028\u0029",
+            "name": "PublicHook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_PublicHook"
+        },                {
+            "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003AHook\u0028\u0029",
+            "name": "Hook",
+            "summary": "",
+            "url": "classes/NACSL-Controllers-CustomTaxonomy.html#method_Hook"
         },                {
             "fqsen": "\\NACSL\\Controllers\\CustomTaxonomy\u003A\u003A\u0024_taxServ",
             "name": "_taxServ",
@@ -201,95 +206,65 @@ Search.appendIndex(
             "summary": "Custom\u0020post\u0020type\u0020linked\u0020to\u0020the\u0020taxonomy.",
             "url": "classes/NACSL-Controllers-CustomTaxonomy.html#property_objType"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\IAdminController",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\IAdminController",
             "name": "IAdminController",
             "summary": "Interface\u0020for\u0020admin\u0020Hook\u0020exclusively.",
-            "url": "classes/NACSL-Controllers-IAdminController.html"
+            "url": "classes/NACSL-Controllers-Interfaces-IAdminController.html"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\IAdminController\u003A\u003AAdminMenu\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\IAdminController\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
             "summary": "",
-            "url": "classes/NACSL-Controllers-IAdminController.html#method_AdminMenu"
+            "url": "classes/NACSL-Controllers-Interfaces-IAdminController.html#method_AdminMenu"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ICptController",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ICptController",
             "name": "ICptController",
             "summary": "Custom\u0020Post\u0020type\u0020controller\u0020interface",
-            "url": "classes/NACSL-Controllers-ICptController.html"
+            "url": "classes/NACSL-Controllers-Interfaces-ICptController.html"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003ARegister\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ICptController\u003A\u003ARegister\u0028\u0029",
             "name": "Register",
             "summary": "Register\u0020custom\u0020post\u0020type",
-            "url": "classes/NACSL-Controllers-ICptController.html#method_Register"
+            "url": "classes/NACSL-Controllers-Interfaces-ICptController.html#method_Register"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AUnregister\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ICptController\u003A\u003AUnregister\u0028\u0029",
             "name": "Unregister",
             "summary": "Unregister\u0020custom\u0020post\u0020type",
-            "url": "classes/NACSL-Controllers-ICptController.html#method_Unregister"
+            "url": "classes/NACSL-Controllers-Interfaces-ICptController.html#method_Unregister"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AAdminMenu\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ICptController\u003A\u003AAdminMenu\u0028\u0029",
             "name": "AdminMenu",
             "summary": "Add\u0020admin\u0020menu",
-            "url": "classes/NACSL-Controllers-ICptController.html#method_AdminMenu"
+            "url": "classes/NACSL-Controllers-Interfaces-ICptController.html#method_AdminMenu"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ICptController\u003A\u003AOptions\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ICptController\u003A\u003AOptions\u0028\u0029",
             "name": "Options",
             "summary": "Add\u0020options\u0020to\u0020the\u0020custom\u0020post\u0020type",
-            "url": "classes/NACSL-Controllers-ICptController.html#method_Options"
+            "url": "classes/NACSL-Controllers-Interfaces-ICptController.html#method_Options"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ITaxController",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ITaxController",
             "name": "ITaxController",
             "summary": "Custom\u0020taxonomy\u0020controller\u0020interface",
-            "url": "classes/NACSL-Controllers-ITaxController.html"
+            "url": "classes/NACSL-Controllers-Interfaces-ITaxController.html"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ITaxController\u003A\u003ARegister\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ITaxController\u003A\u003ARegister\u0028\u0029",
             "name": "Register",
             "summary": "Register\u0020custom\u0020taxonomy",
-            "url": "classes/NACSL-Controllers-ITaxController.html#method_Register"
+            "url": "classes/NACSL-Controllers-Interfaces-ITaxController.html#method_Register"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\ITaxController\u003A\u003AUnregister\u0028\u0029",
+            "fqsen": "\\NACSL\\Controllers\\Interfaces\\ITaxController\u003A\u003AUnregister\u0028\u0029",
             "name": "Unregister",
             "summary": "Unregister\u0020custom\u0020taxonomy",
-            "url": "classes/NACSL-Controllers-ITaxController.html#method_Unregister"
+            "url": "classes/NACSL-Controllers-Interfaces-ITaxController.html#method_Unregister"
         },                {
             "fqsen": "\\NACSL\\Controllers\\TaxJours",
             "name": "TaxJours",
             "summary": "Taxonomy\u0020\u0022Jours\u0022\u0020is\u0020a\u0020day\u0020tag\u0020for\u0020NACSL\\Controllers\\CptMettings",
             "url": "classes/NACSL-Controllers-TaxJours.html"
         },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003ARegister\u0028\u0029",
-            "name": "Register",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_Register"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AUnregister\u0028\u0029",
-            "name": "Unregister",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_Unregister"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AAdminMenu\u0028\u0029",
-            "name": "AdminMenu",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_AdminMenu"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AOptions\u0028\u0029",
-            "name": "Options",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_Options"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AAdminHook\u0028\u0029",
-            "name": "AdminHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_AdminHook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003APublicHook\u0028\u0029",
-            "name": "PublicHook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_PublicHook"
-        },                {
-            "fqsen": "\\NACSL\\Controllers\\TaxJours\u003A\u003AHook\u0028\u0029",
-            "name": "Hook",
-            "summary": "",
-            "url": "classes/NACSL-Controllers-TaxJours.html#method_Hook"
+            "fqsen": "\\NACSL\\Controllers\\TaxTypes",
+            "name": "TaxTypes",
+            "summary": "Taxonomy\u0020\u0022types\u0022\u0020is\u0020a\u0020type\u0020tag\u0020for\u0020NACSL\\Controllers\\CptMettings",
+            "url": "classes/NACSL-Controllers-TaxTypes.html"
         },                {
             "fqsen": "\\NACSL\\Models\\AdminPage",
             "name": "AdminPage",
@@ -333,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\CptGroups",
             "name": "CptGroups",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020arguments\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020the\u0020Groups\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-CptGroups.html"
         },                {
             "fqsen": "\\NACSL\\Models\\CptGroups\u003A\u003A__construct\u0028\u0029",
@@ -343,7 +318,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\CptMeetings",
             "name": "CptMeetings",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020arguments\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020the\u0020meetings\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-CptMeetings.html"
         },                {
             "fqsen": "\\NACSL\\Models\\CptMeetings\u003A\u003A__construct\u0028\u0029",
@@ -353,7 +328,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\CptSubCom",
             "name": "CptSubCom",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020arguments\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020the\u0020sub\u002Dcomitee\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-CptSubCom.html"
         },                {
             "fqsen": "\\NACSL\\Models\\CptSubCom\u003A\u003A__construct\u0028\u0029",
@@ -363,78 +338,183 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType",
             "name": "CustomPostType",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020arguments\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-CustomPostType.html"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/NACSL-Models-CustomPostType.html#method___construct"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003AToArray\u0028\u0029",
             "name": "ToArray",
-            "summary": "",
+            "summary": "Return\u0020this\u0020object\u0020as\u0020an\u0020array\u0020as\u0020wordpress\u0020expected\u0020it.\u0020If\u0020properity\u0020value\u0020is\u0020null,\u0020the\u0020value\u0020will\u0020has\u0020the\u0020default\u0020value\u0020from\u0020wordpress\u0020system.",
             "url": "classes/NACSL-Models-CustomPostType.html#method_ToArray"
         },                {
-            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024name",
-            "name": "name",
-            "summary": "",
-            "url": "classes/NACSL-Models-CustomPostType.html#property_name"
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024post_type",
+            "name": "post_type",
+            "summary": "\u0028Required\u0029\u0020Post\u0020type\u0020key.\u0020Must\u0020not\u0020exceed\u002020\u0020characters\u0020and\u0020may\u0020only\u0020contain\u0020lowercase\u0020alphanumeric\u0020characters,\u0020dashes,\u0020and\u0020underscores.\u0020See\u0020sanitize_key\u0028\u0029.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_post_type"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024label",
+            "name": "label",
+            "summary": "Name\u0020of\u0020the\u0020post\u0020type\u0020shown\u0020in\u0020the\u0020menu.\u0020Usually\u0020plural.\u0020Default\u0020is\u0020value\u0020of\u0020\u0024labels\u005B\u0027name\u0027\u005D.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_label"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024labels",
             "name": "labels",
-            "summary": "",
+            "summary": "An\u0020array\u0020of\u0020labels\u0020for\u0020this\u0020post\u0020type.\u0020If\u0020not\u0020set,\u0020post\u0020labels\u0020are\u0020inherited\u0020for\u0020non\u002Dhierarchical\u0020types\u0020and\u0020page\u0020labels\u0020for\u0020hierarchical\u0020ones.\u0020See\u0020get_post_type_labels\u0028\u0029\u0020for\u0020a\u0020full\u0020list\u0020of\u0020supported\u0020labels.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_labels"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024description",
             "name": "description",
-            "summary": "",
+            "summary": "A\u0020short\u0020descriptive\u0020summary\u0020of\u0020what\u0020the\u0020post\u0020type\u0020is.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_description"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024public",
             "name": "public",
-            "summary": "",
+            "summary": "Whether\u0020a\u0020post\u0020type\u0020is\u0020intended\u0020for\u0020use\u0020publicly\u0020either\u0020via\u0020the\u0020admin\u0020interface\u0020or\u0020by\u0020front\u002Dend\u0020users.\u0020While\u0020the\u0020default\u0020settings\u0020of\u0020\u0024exclude_from_search,\u0020\u0024publicly_queryable,\u0020\u0024show_ui,\u0020and\u0020\u0024show_in_nav_menus\u0020are\u0020inherited\u0020from\u0020\u0024public,\u0020each\u0020does\u0020not\u0020rely\u0020on\u0020this\u0020relationship\u0020and\u0020controls\u0020a\u0020very\u0020specific\u0020intention.\u0020Default\u0020false.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_public"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024hierarchical",
             "name": "hierarchical",
-            "summary": "",
+            "summary": "Whether\u0020the\u0020post\u0020type\u0020is\u0020hierarchical\u0020\u0028e.g.\u0020page\u0029.\u0020Default\u0020false.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_hierarchical"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024exclude_from_search",
             "name": "exclude_from_search",
-            "summary": "",
+            "summary": "Whether\u0020to\u0020exclude\u0020posts\u0020with\u0020this\u0020post\u0020type\u0020from\u0020front\u0020end\u0020search\u0020results.\u0020Default\u0020is\u0020the\u0020opposite\u0020value\u0020of\u0020\u0024public.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_exclude_from_search"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024publicly_queryable",
+            "name": "publicly_queryable",
+            "summary": "Whether\u0020queries\u0020can\u0020be\u0020performed\u0020on\u0020the\u0020front\u0020end\u0020for\u0020the\u0020post\u0020type\u0020as\u0020part\u0020of\u0020parse_request\u0028\u0029.\u0020Endpoints\u0020would\u0020include\u003A",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_publicly_queryable"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024show_ui",
+            "name": "show_ui",
+            "summary": "Whether\u0020to\u0020generate\u0020and\u0020allow\u0020a\u0020UI\u0020for\u0020managing\u0020this\u0020post\u0020type\u0020in\u0020the\u0020admin.\u0020Default\u0020is\u0020value\u0020of\u0020\u0024public.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_show_ui"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024show_in_menu",
+            "name": "show_in_menu",
+            "summary": "Where\u0020to\u0020show\u0020the\u0020post\u0020type\u0020in\u0020the\u0020admin\u0020menu.\u0020To\u0020work,\u0020\u0024show_ui\u0020must\u0020be\u0020true.\u0020If\u0020true,\u0020the\u0020post\u0020type\u0020is\u0020shown\u0020in\u0020its\u0020own\u0020top\u0020level\u0020menu.\u0020If\u0020false,\u0020no\u0020menu\u0020is\u0020shown.\u0020If\u0020a\u0020string\u0020of\u0020an\u0020existing\u0020top\u0020level\u0020menu\u0020\u0028\u0027tools.php\u0027\u0020or\u0020\u0027edit.php\u003Fpost_type\u003Dpage\u0027,\u0020for\u0020example\u0029,\u0020the\u0020post\u0020type\u0020will\u0020be\u0020placed\u0020as\u0020a\u0020sub\u002Dmenu\u0020of\u0020that.\u0020Default\u0020is\u0020value\u0020of\u0020\u0024show_ui.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_show_in_menu"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024show_in_nav_menus",
+            "name": "show_in_nav_menus",
+            "summary": "Makes\u0020this\u0020post\u0020type\u0020available\u0020for\u0020selection\u0020in\u0020navigation\u0020menus.\u0020Default\u0020is\u0020value\u0020of\u0020\u0024public.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_show_in_nav_menus"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024show_in_admin_bar",
+            "name": "show_in_admin_bar",
+            "summary": "Makes\u0020this\u0020post\u0020type\u0020available\u0020via\u0020the\u0020admin\u0020bar.\u0020Default\u0020is\u0020value\u0020of\u0020\u0024show_in_menu.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_show_in_admin_bar"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024show_in_rest",
             "name": "show_in_rest",
-            "summary": "",
+            "summary": "Whether\u0020to\u0020include\u0020the\u0020post\u0020type\u0020in\u0020the\u0020REST\u0020API.\u0020Set\u0020this\u0020to\u0020true\u0020for\u0020the\u0020post\u0020type\u0020to\u0020be\u0020available\u0020in\u0020the\u0020block\u0020editor.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_show_in_rest"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024rest_base",
             "name": "rest_base",
-            "summary": "",
+            "summary": "To\u0020change\u0020the\u0020base\u0020URL\u0020of\u0020REST\u0020API\u0020route.\u0020Default\u0020is\u0020\u0024post_type.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_rest_base"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024rest_namespace",
             "name": "rest_namespace",
-            "summary": "",
+            "summary": "To\u0020change\u0020the\u0020namespace\u0020URL\u0020of\u0020REST\u0020API\u0020route.\u0020Default\u0020is\u0020wp\/v2.\u0020\u005BAppConstants\u003A\u003APREFIX\u005D",
             "url": "classes/NACSL-Models-CustomPostType.html#property_rest_namespace"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024rest_controller_class",
+            "name": "rest_controller_class",
+            "summary": "REST\u0020API\u0020controller\u0020class\u0020name.\u0020Default\u0020is\u0020\u0027WP_REST_Posts_Controller\u0027.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_rest_controller_class"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024menu_position",
             "name": "menu_position",
-            "summary": "",
+            "summary": "The\u0020position\u0020in\u0020the\u0020menu\u0020order\u0020the\u0020post\u0020type\u0020should\u0020appear.\u0020To\u0020work,\u0020\u0024show_in_menu\u0020must\u0020be\u0020true.\u0020Default\u0020null\u0020\u0028at\u0020the\u0020bottom\u0029.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_menu_position"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024menu_icon",
             "name": "menu_icon",
-            "summary": "",
+            "summary": "The\u0020URL\u0020to\u0020the\u0020icon\u0020to\u0020be\u0020used\u0020for\u0020this\u0020menu.\u0020Pass\u0020a\u0020base64\u002Dencoded\u0020SVG\u0020using\u0020a\u0020data\u0020URI,\u0020which\u0020will\u0020be\u0020colored\u0020to\u0020match\u0020the\u0020color\u0020scheme\u0020\u002D\u002D\u0020this\u0020should\u0020begin\u0020with\u0020\u0027data\u003Aimage\/svg\u002Bxml\u003Bbase64,\u0027.\u0020Pass\u0020the\u0020name\u0020of\u0020a\u0020Dashicons\u0020helper\u0020class\u0020to\u0020use\u0020a\u0020font\u0020icon,\u0020e.g.\u0020\u0027dashicons\u002Dchart\u002Dpie\u0027.\u0020Pass\u0020\u0027none\u0027\u0020to\u0020leave\u0020div.wp\u002Dmenu\u002Dimage\u0020empty\u0020so\u0020an\u0020icon\u0020can\u0020be\u0020added\u0020via\u0020CSS.\u0020Defaults\u0020to\u0020use\u0020the\u0020posts\u0020icon.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_menu_icon"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024capability_type",
+            "name": "capability_type",
+            "summary": "The\u0020string\u0020to\u0020use\u0020to\u0020build\u0020the\u0020read,\u0020edit,\u0020and\u0020delete\u0020capabilities.\u0020May\u0020be\u0020passed\u0020as\u0020an\u0020array\u0020to\u0020allow\u0020for\u0020alternative\u0020plurals\u0020when\u0020using\u0020this\u0020argument\u0020as\u0020a\u0020base\u0020to\u0020construct\u0020the\u0020capabilities,\u0020e.g.\u0020array\u0028\u0027story\u0027,\u0020\u0027stories\u0027\u0029.\u0020Default\u0020\u0027post\u0027.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_capability_type"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024capabilities",
+            "name": "capabilities",
+            "summary": "\u0028string\u005B\u005D\u0029\u0020Array\u0020of\u0020capabilities\u0020for\u0020this\u0020post\u0020type.\u0020\u0024capability_type\u0020is\u0020used\u0020as\u0020a\u0020base\u0020to\u0020construct\u0020capabilities\u0020by\u0020default.\u0020See\u0020get_post_type_capabilities\u0028\u0029.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_capabilities"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024map_meta_cap",
+            "name": "map_meta_cap",
+            "summary": "Whether\u0020to\u0020use\u0020the\u0020internal\u0020default\u0020meta\u0020capability\u0020handling.\u0020Default\u0020false.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_map_meta_cap"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024supports",
             "name": "supports",
-            "summary": "",
+            "summary": "Core\u0020feature\u0028s\u0029\u0020the\u0020post\u0020type\u0020supports.\u0020Serves\u0020as\u0020an\u0020alias\u0020for\u0020calling\u0020add_post_type_support\u0028\u0029\u0020directly.\u0020Core\u0020features\u0020include\u0020\u0027title\u0027,\u0020\u0027editor\u0027,\u0020\u0027comments\u0027,\u0020\u0027revisions\u0027,\u0020\u0027trackbacks\u0027,\u0020\u0027author\u0027,\u0020\u0027excerpt\u0027,\u0020\u0027page\u002Dattributes\u0027,\u0020\u0027thumbnail\u0027,\u0020\u0027custom\u002Dfields\u0027,\u0020and\u0020\u0027post\u002Dformats\u0027.\u0020Additionally,\u0020the\u0020\u0027revisions\u0027\u0020feature\u0020dictates\u0020whether\u0020the\u0020post\u0020type\u0020will\u0020store\u0020revisions,\u0020and\u0020the\u0020\u0027comments\u0027\u0020feature\u0020dictates\u0020whether\u0020the\u0020comments\u0020count\u0020will\u0020show\u0020on\u0020the\u0020edit\u0020screen.\u0020A\u0020feature\u0020can\u0020also\u0020be\u0020specified\u0020as\u0020an\u0020array\u0020of\u0020arguments\u0020to\u0020provide\u0020additional\u0020information\u0020about\u0020supporting\u0020that\u0020feature.\u0020Default\u0020is\u0020an\u0020array\u0020containing\u0020\u0027title\u0027\u0020and\u0020\u0027editor\u0027.",
             "url": "classes/NACSL-Models-CustomPostType.html#property_supports"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024register_meta_box_cb",
+            "name": "register_meta_box_cb",
+            "summary": "Provide\u0020a\u0020callback\u0020function\u0020that\u0020sets\u0020up\u0020the\u0020meta\u0020boxes\u0020for\u0020the\u0020edit\u0020form.\u0020Do\u0020remove_meta_box\u0028\u0029\u0020and\u0020add_meta_box\u0028\u0029\u0020calls\u0020in\u0020the\u0020callback.\u0020Default\u0020null.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_register_meta_box_cb"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024taxonomies",
+            "name": "taxonomies",
+            "summary": "An\u0020array\u0020of\u0020taxonomy\u0020identifiers\u0020that\u0020will\u0020be\u0020registered\u0020for\u0020the\u0020post\u0020type.\u0020Taxonomies\u0020can\u0020be\u0020registered\u0020later\u0020with\u0020register_taxonomy\u0028\u0029\u0020or\u0020register_taxonomy_for_object_type\u0028\u0029.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_taxonomies"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024has_archive",
+            "name": "has_archive",
+            "summary": "Whether\u0020there\u0020should\u0020be\u0020post\u0020type\u0020archives,\u0020or\u0020if\u0020a\u0020string,\u0020the\u0020archive\u0020slug\u0020to\u0020use.\u0020Will\u0020generate\u0020the\u0020proper\u0020rewrite\u0020rules\u0020if\u0020\u0024rewrite\u0020is\u0020enabled.\u0020Default\u0020false.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_has_archive"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024rewrite",
             "name": "rewrite",
-            "summary": "",
+            "summary": "Triggers\u0020the\u0020handling\u0020of\u0020rewrites\u0020for\u0020this\u0020post\u0020type.\u0020To\u0020prevent\u0020rewrite,\u0020set\u0020to\u0020false.\u0020Defaults\u0020to\u0020true,\u0020using\u0020\u0024post_type\u0020as\u0020slug.\u0020To\u0020specify\u0020rewrite\u0020rules,\u0020an\u0020array\u0020can\u0020be\u0020passed\u0020with\u0020any\u0020of\u0020these\u0020keys\u003A",
             "url": "classes/NACSL-Models-CustomPostType.html#property_rewrite"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024query_var",
+            "name": "query_var",
+            "summary": "Sets\u0020the\u0020query_var\u0020key\u0020for\u0020this\u0020post\u0020type.\u0020Defaults\u0020to\u0020\u0024post_type\u0020key.\u0020If\u0020false,\u0020a\u0020post\u0020type\u0020cannot\u0020be\u0020loaded\u0020at\u0020\u003F\u007Bquery_var\u007D\u003D\u007Bpost_slug\u007D.\u0020If\u0020specified\u0020as\u0020a\u0020string,\u0020the\u0020query\u0020\u003F\u007Bquery_var_string\u007D\u003D\u007Bpost_slug\u007D\u0020will\u0020be\u0020valid.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_query_var"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024can_export",
+            "name": "can_export",
+            "summary": "Whether\u0020to\u0020allow\u0020this\u0020post\u0020type\u0020to\u0020be\u0020exported.\u0020Default\u0020true.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_can_export"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024delete_with_user",
+            "name": "delete_with_user",
+            "summary": "Whether\u0020to\u0020delete\u0020posts\u0020of\u0020this\u0020type\u0020when\u0020deleting\u0020a\u0020user.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_delete_with_user"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024template",
+            "name": "template",
+            "summary": "Array\u0020of\u0020blocks\u0020to\u0020use\u0020as\u0020the\u0020default\u0020initial\u0020state\u0020for\u0020an\u0020editor\u0020session.\u0020Each\u0020item\u0020should\u0020be\u0020an\u0020array\u0020containing\u0020block\u0020name\u0020and\u0020optional\u0020attributes.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_template"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024template_lock",
+            "name": "template_lock",
+            "summary": "Whether\u0020the\u0020block\u0020template\u0020should\u0020be\u0020locked\u0020if\u0020\u0024template\u0020is\u0020set.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property_template_lock"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024_builtin",
+            "name": "_builtin",
+            "summary": "FOR\u0020INTERNAL\u0020USE\u0020ONLY\u0021\u0020True\u0020if\u0020this\u0020post\u0020type\u0020is\u0020a\u0020native\u0020or\u0020\u0022built\u002Din\u0022\u0020post_type.\u0020Default\u0020false.",
+            "url": "classes/NACSL-Models-CustomPostType.html#property__builtin"
+        },                {
+            "fqsen": "\\NACSL\\Models\\CustomPostType\u003A\u003A\u0024_edit_link",
+            "name": "_edit_link",
+            "summary": "FOR\u0020INTERNAL\u0020USE\u0020ONLY\u0021\u0020URL\u0020segment\u0020to\u0020use\u0020for\u0020edit\u0020link\u0020of\u0020this\u0020post\u0020type.\u0020Default\u0020\u0027post.php\u003Fpost\u003D\u0025d\u0027.\u0020Default\u0020value\u003A\u0020array\u0028\u0029",
+            "url": "classes/NACSL-Models-CustomPostType.html#property__edit_link"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomTaxonomy",
             "name": "CustomTaxonomy",
@@ -453,7 +533,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\CustomTaxonomy\u003A\u003A\u0024taxonomy",
             "name": "taxonomy",
-            "summary": "\u0028Required\u0029\u0020Taxonomy\u0020key,\u0020must\u0020not\u0020exceed\u002032\u0020characters.",
+            "summary": "\u0028Required\u0029\u0020Taxonomy\u0020key,\u0020must\u0020not\u0020exceed\u002032\u0020characters.\u0020It\u0027s\u0020automatically\u0020generated\u0020with\u0020the\u0020inherited\u0020class\u0020name.",
             "url": "classes/NACSL-Models-CustomTaxonomy.html#property_taxonomy"
         },                {
             "fqsen": "\\NACSL\\Models\\CustomTaxonomy\u003A\u003A\u0024object_type",
@@ -596,6 +676,16 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Models-TaxJours.html#method___construct"
         },                {
+            "fqsen": "\\NACSL\\Models\\TaxTypes",
+            "name": "TaxTypes",
+            "summary": "Representation\u0020of\u0020all\u0020arguments\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020taxonomy.",
+            "url": "classes/NACSL-Models-TaxTypes.html"
+        },                {
+            "fqsen": "\\NACSL\\Models\\TaxTypes\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/NACSL-Models-TaxTypes.html#method___construct"
+        },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\AdminNoticeVM",
             "name": "AdminNoticeVM",
             "summary": "",
@@ -668,7 +758,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptGroupsLabelsVM",
             "name": "CptGroupsLabelsVM",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020labels\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-ViewModels-CptGroupsLabelsVM.html"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptGroupsLabelsVM\u003A\u003A__construct\u0028\u0029",
@@ -683,177 +773,177 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM",
             "name": "CptLabelsVM",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020labels\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024name",
             "name": "name",
-            "summary": "",
+            "summary": "General\u0020name\u0020for\u0020the\u0020post\u0020type,\u0020usually\u0020plural.\u0020The\u0020same\u0020and\u0020overridden\u0020by\u0020\u0024post_type_object\u002D\u003Elabel.\u0020Default\u0020is\u0020\u2018Posts\u2019\u0020\/\u0020\u2018Pages\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_name"
-        },                {
-            "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024menu_name",
-            "name": "menu_name",
-            "summary": "",
-            "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_menu_name"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024singular_name",
             "name": "singular_name",
-            "summary": "",
+            "summary": "Name\u0020for\u0020one\u0020object\u0020of\u0020this\u0020post\u0020type.\u0020Default\u0020is\u0020\u2018Post\u2019\u0020\/\u0020\u2018Page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_singular_name"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024add_new",
             "name": "add_new",
-            "summary": "",
+            "summary": "Default\u0020is\u0020\u2018Add\u0020New\u2019\u0020for\u0020both\u0020hierarchical\u0020and\u0020non\u002Dhierarchical\u0020types.\u0020When\u0020internationalizing\u0020this\u0020string,\u0020please\u0020use\u0020a\u0020gettext\u0020context\u0020matching\u0020your\u0020post\u0020type.\u0020Example\u003A\u0020_x\u0028\u0020\u0027Add\u0020New\u0027,\u0020\u0027product\u0027,\u0020\u0027textdomain\u0027\u0020\u0029\u003B.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_add_new"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024add_new_item",
             "name": "add_new_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020adding\u0020a\u0020new\u0020singular\u0020item.\u0020Default\u0020is\u0020\u2018Add\u0020New\u0020Post\u2019\u0020\/\u0020\u2018Add\u0020New\u0020Page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_add_new_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024edit_item",
             "name": "edit_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020editing\u0020a\u0020singular\u0020item.\u0020Default\u0020is\u0020\u2018Edit\u0020Post\u2019\u0020\/\u0020\u2018Edit\u0020Page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_edit_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024new_item",
             "name": "new_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020new\u0020item\u0020page\u0020title.\u0020Default\u0020is\u0020\u2018New\u0020Post\u2019\u0020\/\u0020\u2018New\u0020Page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_new_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024view_item",
             "name": "view_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020viewing\u0020a\u0020singular\u0020item.\u0020Default\u0020is\u0020\u2018View\u0020Post\u2019\u0020\/\u0020\u2018View\u0020Page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_view_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024view_items",
             "name": "view_items",
-            "summary": "",
+            "summary": "Label\u0020for\u0020viewing\u0020post\u0020type\u0020archives.\u0020Default\u0020is\u0020\u2018View\u0020Posts\u2019\u0020\/\u0020\u2018View\u0020Pages\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_view_items"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024search_items",
             "name": "search_items",
-            "summary": "",
+            "summary": "Label\u0020for\u0020searching\u0020plural\u0020items.\u0020Default\u0020is\u0020\u2018Search\u0020Posts\u2019\u0020\/\u0020\u2018Search\u0020Pages\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_search_items"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024not_found",
             "name": "not_found",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020no\u0020items\u0020are\u0020found.\u0020Default\u0020is\u0020\u2018No\u0020posts\u0020found\u2019\u0020\/\u0020\u2018No\u0020pages\u0020found\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_not_found"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024not_found_in_trash",
             "name": "not_found_in_trash",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020no\u0020items\u0020are\u0020in\u0020the\u0020Trash.\u0020Default\u0020is\u0020\u2018No\u0020posts\u0020found\u0020in\u0020Trash\u2019\u0020\/\u0020\u2018No\u0020pages\u0020found\u0020in\u0020Trash\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_not_found_in_trash"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024parent_item_colon",
             "name": "parent_item_colon",
-            "summary": "",
+            "summary": "Label\u0020used\u0020to\u0020prefix\u0020parents\u0020of\u0020hierarchical\u0020items.\u0020Not\u0020used\u0020on\u0020non\u002Dhierarchical\u0020post\u0020types.\u0020Default\u0020is\u0020\u2018Parent\u0020Page\u003A\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_parent_item_colon"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024all_items",
             "name": "all_items",
-            "summary": "",
+            "summary": "Label\u0020to\u0020signify\u0020all\u0020items\u0020in\u0020a\u0020submenu\u0020link.\u0020Default\u0020is\u0020\u2018All\u0020Posts\u2019\u0020\/\u0020\u2018All\u0020Pages\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_all_items"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024archives",
             "name": "archives",
-            "summary": "",
+            "summary": "Label\u0020for\u0020archives\u0020in\u0020nav\u0020menus.\u0020Default\u0020is\u0020\u2018Post\u0020Archives\u2019\u0020\/\u0020\u2018Page\u0020Archives\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_archives"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024attributes",
             "name": "attributes",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020attributes\u0020meta\u0020box.\u0020Default\u0020is\u0020\u2018Post\u0020Attributes\u2019\u0020\/\u0020\u2018Page",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_attributes"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024insert_into_item",
             "name": "insert_into_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020media\u0020frame\u0020button.\u0020Default\u0020is\u0020\u2018Insert\u0020into\u0020post\u2019\u0020\/\u0020\u2018Insert\u0020into\u0020page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_insert_into_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024uploaded_to_this_item",
             "name": "uploaded_to_this_item",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020media\u0020frame\u0020filter.\u0020Default\u0020is\u0020\u2018Uploaded\u0020to\u0020this\u0020post\u2019\u0020\/\u0020\u2018Uploaded\u0020to\u0020this\u0020page\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_uploaded_to_this_item"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024featured_image",
             "name": "featured_image",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020featured\u0020image\u0020meta\u0020box\u0020title.\u0020Default\u0020is\u0020\u2018Featured\u0020image\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_featured_image"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024set_featured_image",
             "name": "set_featured_image",
-            "summary": "",
+            "summary": "Label\u0020for\u0020setting\u0020the\u0020featured\u0020image.\u0020Default\u0020is\u0020\u2018Set\u0020featured\u0020image\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_set_featured_image"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024remove_featured_image",
             "name": "remove_featured_image",
-            "summary": "",
+            "summary": "Label\u0020for\u0020removing\u0020the\u0020featured\u0020image.\u0020Default\u0020is\u0020\u2018Remove\u0020featured\u0020image\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_remove_featured_image"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024use_featured_image",
             "name": "use_featured_image",
-            "summary": "",
+            "summary": "Label\u0020in\u0020the\u0020media\u0020frame\u0020for\u0020using\u0020a\u0020featured\u0020image.\u0020Default\u0020is\u0020\u2018Use\u0020as\u0020featured\u0020image\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_use_featured_image"
+        },                {
+            "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024menu_name",
+            "name": "menu_name",
+            "summary": "Label\u0020for\u0020the\u0020menu\u0020name.\u0020Default\u0020is\u0020the\u0020same\u0020as\u0020name.",
+            "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_menu_name"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024filter_items_list",
             "name": "filter_items_list",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020table\u0020views\u0020hidden\u0020heading.\u0020Default\u0020is\u0020\u2018Filter\u0020posts\u0020list\u2019\u0020\/\u0020\u2018Filter\u0020pages\u0020list\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_filter_items_list"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024filter_by_date",
             "name": "filter_by_date",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020date\u0020filter\u0020in\u0020list\u0020tables.\u0020Default\u0020is\u0020\u2018Filter\u0020by\u0020date\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_filter_by_date"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024items_list_navigation",
             "name": "items_list_navigation",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020table\u0020pagination\u0020hidden\u0020heading.\u0020Default\u0020is\u0020\u2018Posts\u0020list\u0020navigation\u2019\u0020\/\u0020\u2018Pages\u0020list\u0020navigation\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_items_list_navigation"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024items_list",
             "name": "items_list",
-            "summary": "",
+            "summary": "Label\u0020for\u0020the\u0020table\u0020hidden\u0020heading.\u0020Default\u0020is\u0020\u2018Posts\u0020list\u2019\u0020\/\u0020\u2018Pages\u0020list\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_items_list"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_published",
             "name": "item_published",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020an\u0020item\u0020is\u0020published.\u0020Default\u0020is\u0020\u2018Post\u0020published.\u2019\u0020\/\u0020\u2018Page\u0020published.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_published"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_published_privately",
             "name": "item_published_privately",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020an\u0020item\u0020is\u0020published\u0020with\u0020private\u0020visibility.\u0020Default\u0020is\u0020\u2018Post\u0020published\u0020privately.\u2019\u0020\/\u0020\u2018Page\u0020published\u0020privately.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_published_privately"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_reverted_to_draft",
             "name": "item_reverted_to_draft",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020an\u0020item\u0020is\u0020switched\u0020to\u0020a\u0020draft.\u0020Default\u0020is\u0020\u2018Post\u0020reverted\u0020to\u0020draft.\u2019\u0020\/\u0020\u2018Page\u0020reverted\u0020to\u0020draft.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_reverted_to_draft"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_scheduled",
             "name": "item_scheduled",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020an\u0020item\u0020is\u0020scheduled\u0020for\u0020publishing.\u0020Default\u0020is\u0020\u2018Post\u0020scheduled.\u2019\u0020\/\u0020\u2018Page\u0020scheduled.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_scheduled"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_updated",
             "name": "item_updated",
-            "summary": "",
+            "summary": "Label\u0020used\u0020when\u0020an\u0020item\u0020is\u0020updated.\u0020Default\u0020is\u0020\u2018Post\u0020updated.\u2019\u0020\/\u0020\u2018Page\u0020updated.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_updated"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_link",
             "name": "item_link",
-            "summary": "",
+            "summary": "Title\u0020for\u0020a\u0020navigation\u0020link\u0020block\u0020variation.\u0020Default\u0020is\u0020\u2018Post\u0020Link\u2019\u0020\/\u0020\u2018Page\u0020Link\u2019.",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_link"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptLabelsVM\u003A\u003A\u0024item_link_description",
             "name": "item_link_description",
-            "summary": "",
+            "summary": "Description\u0020for\u0020a\u0020navigation\u0020link\u0020block\u0020variation.\u0020Default\u0020is\u0020\u2018A\u0020link\u0020to\u0020a\u0020post.\u2019\u0020\/\u0020\u2018A\u0020link\u0020to\u0020a\u0020page.\u2019",
             "url": "classes/NACSL-Models-ViewModels-CptLabelsVM.html#property_item_link_description"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptMeetingsLabelsVM",
             "name": "CptMeetingsLabelsVM",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020labels\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-ViewModels-CptMeetingsLabelsVM.html"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptMeetingsLabelsVM\u003A\u003A__construct\u0028\u0029",
@@ -868,7 +958,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptSubComLabelsVM",
             "name": "CptSubComLabelsVM",
-            "summary": "",
+            "summary": "Representation\u0020of\u0020all\u0020labels\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020post\u0020type.",
             "url": "classes/NACSL-Models-ViewModels-CptSubComLabelsVM.html"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\CptSubComLabelsVM\u003A\u003A__construct\u0028\u0029",
@@ -881,15 +971,15 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Models-ViewModels-CptSubComLabelsVM.html#method_ToArray"
         },                {
-            "fqsen": "\\NACSL\\Models\\ViewModels\\IViewModel",
+            "fqsen": "\\NACSL\\Models\\ViewModels\\Interfaces\\IViewModel",
             "name": "IViewModel",
             "summary": "",
-            "url": "classes/NACSL-Models-ViewModels-IViewModel.html"
+            "url": "classes/NACSL-Models-ViewModels-Interfaces-IViewModel.html"
         },                {
-            "fqsen": "\\NACSL\\Models\\ViewModels\\IViewModel\u003A\u003AToArray\u0028\u0029",
+            "fqsen": "\\NACSL\\Models\\ViewModels\\Interfaces\\IViewModel\u003A\u003AToArray\u0028\u0029",
             "name": "ToArray",
             "summary": "",
-            "url": "classes/NACSL-Models-ViewModels-IViewModel.html#method_ToArray"
+            "url": "classes/NACSL-Models-ViewModels-Interfaces-IViewModel.html#method_ToArray"
         },                {
             "fqsen": "\\NACSL\\Models\\ViewModels\\TaxJoursLabelsVM",
             "name": "TaxJoursLabelsVM",
@@ -1051,6 +1141,16 @@ Search.appendIndex(
             "summary": "Used\u0020in\u0020the\u0020block\u0020editor.\u0020Description\u0020for\u0020a\u0020navigation\u0020link\u0020block\u0020variation.\u0020Default\u0020\u0027A\u0020link\u0020to\u0020a\u0020tag\u0027\/\u0027A\u0020link\u0020to\u0020a\u0020category.\u0027",
             "url": "classes/NACSL-Models-ViewModels-TaxLabelsVM.html#property_item_link_description"
         },                {
+            "fqsen": "\\NACSL\\Models\\ViewModels\\TaxTypesLabelsVM",
+            "name": "TaxTypesLabelsVM",
+            "summary": "Representation\u0020of\u0020all\u0020labels\u0020that\u0020wordpress\u0020need\u0020to\u0020build\u0020a\u0020custom\u0020taxonomy.",
+            "url": "classes/NACSL-Models-ViewModels-TaxTypesLabelsVM.html"
+        },                {
+            "fqsen": "\\NACSL\\Models\\ViewModels\\TaxTypesLabelsVM\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/NACSL-Models-ViewModels-TaxTypesLabelsVM.html#method___construct"
+        },                {
             "fqsen": "\\NACSL\\Services\\AuthorizationService",
             "name": "AuthorizationService",
             "summary": "",
@@ -1065,6 +1165,11 @@ Search.appendIndex(
             "name": "UninstallPluginsAllowed",
             "summary": "",
             "url": "classes/NACSL-Services-AuthorizationService.html#method_UninstallPluginsAllowed"
+        },                {
+            "fqsen": "\\NACSL\\Services\\AuthorizationService\u003A\u003AAdminCanManageOption\u0028\u0029",
+            "name": "AdminCanManageOption",
+            "summary": "",
+            "url": "classes/NACSL-Services-AuthorizationService.html#method_AdminCanManageOption"
         },                {
             "fqsen": "\\NACSL\\Services\\AuthorizationService\u003A\u003AAdminCanDo\u0028\u0029",
             "name": "AdminCanDo",
@@ -1081,35 +1186,35 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Services-CptService.html"
         },                {
-            "fqsen": "\\NACSL\\Services\\CptService\u003A\u003AGetModel\u0028\u0029",
-            "name": "GetModel",
+            "fqsen": "\\NACSL\\Services\\CptService\u003A\u003AGetModelData\u0028\u0029",
+            "name": "GetModelData",
             "summary": "",
-            "url": "classes/NACSL-Services-CptService.html#method_GetModel"
+            "url": "classes/NACSL-Services-CptService.html#method_GetModelData"
         },                {
-            "fqsen": "\\NACSL\\Services\\ICptService",
+            "fqsen": "\\NACSL\\Services\\Interfaces\\ICptService",
             "name": "ICptService",
             "summary": "",
-            "url": "classes/NACSL-Services-ICptService.html"
+            "url": "classes/NACSL-Services-Interfaces-ICptService.html"
         },                {
-            "fqsen": "\\NACSL\\Services\\ICptService\u003A\u003AGetModel\u0028\u0029",
-            "name": "GetModel",
+            "fqsen": "\\NACSL\\Services\\Interfaces\\ICptService\u003A\u003AGetModelData\u0028\u0029",
+            "name": "GetModelData",
             "summary": "",
-            "url": "classes/NACSL-Services-ICptService.html#method_GetModel"
+            "url": "classes/NACSL-Services-Interfaces-ICptService.html#method_GetModelData"
         },                {
-            "fqsen": "\\NACSL\\Services\\ITaxService",
+            "fqsen": "\\NACSL\\Services\\Interfaces\\ITaxService",
             "name": "ITaxService",
             "summary": "Basic\u0020service\u0020methods\u0020for\u0020NACSL\\Controller\\CustomTaxonomy",
-            "url": "classes/NACSL-Services-ITaxService.html"
+            "url": "classes/NACSL-Services-Interfaces-ITaxService.html"
         },                {
-            "fqsen": "\\NACSL\\Services\\ITaxService\u003A\u003AGetModel\u0028\u0029",
+            "fqsen": "\\NACSL\\Services\\Interfaces\\ITaxService\u003A\u003AGetModel\u0028\u0029",
             "name": "GetModel",
             "summary": "Get\u0020the\u0020specific\u0020CustomTaxonomy\u0020model\u0020for\u0020NACSL\\Controller\\CustomTaxonomy\u0020to\u0020build\u0020a\u0020custom\u0020taxonomy.",
-            "url": "classes/NACSL-Services-ITaxService.html#method_GetModel"
+            "url": "classes/NACSL-Services-Interfaces-ITaxService.html#method_GetModel"
         },                {
-            "fqsen": "\\NACSL\\Services\\ITaxService\u003A\u003AGetObjectType\u0028\u0029",
+            "fqsen": "\\NACSL\\Services\\Interfaces\\ITaxService\u003A\u003AGetObjectType\u0028\u0029",
             "name": "GetObjectType",
             "summary": "Get\u0020refer\u0020custom\u0020post\u0020type\u0020to\u0020build\u0020the\u0020custom\u0020taxonomy.",
-            "url": "classes/NACSL-Services-ITaxService.html#method_GetObjectType"
+            "url": "classes/NACSL-Services-Interfaces-ITaxService.html#method_GetObjectType"
         },                {
             "fqsen": "\\NACSL\\Services\\StartupService",
             "name": "StartupService",
@@ -1181,10 +1286,10 @@ Search.appendIndex(
             "summary": "Instance\u0020of\u0020AdminNotice\u0020and\u0020show\u0020an\u0020admin\u0020notice",
             "url": "classes/NACSL-Utilities-AdminNotice.html#method___construct"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003ARemoveDefault\u0028\u0029",
-            "name": "RemoveDefault",
+            "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003ARemoveDefaultAdminNotices\u0028\u0029",
+            "name": "RemoveDefaultAdminNotices",
             "summary": "Remove\u0020the\u0020default\u0020Admin\u0020notice",
-            "url": "classes/NACSL-Utilities-AdminNotice.html#method_RemoveDefault"
+            "url": "classes/NACSL-Utilities-AdminNotice.html#method_RemoveDefaultAdminNotices"
         },                {
             "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003AMessage\u0028\u0029",
             "name": "Message",
@@ -1198,7 +1303,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003AAdminHook\u0028\u0029",
             "name": "AdminHook",
-            "summary": "Restricted\u0020hooks\u0020to\u0020admin\u0020only.",
+            "summary": "Admin\u0020restricted\u0020hooks\u0020only.",
             "url": "classes/NACSL-Utilities-AdminNotice.html#method_AdminHook"
         },                {
             "fqsen": "\\NACSL\\Utilities\\AdminNotice\u003A\u003A\u0024_noticeVM",
@@ -1215,6 +1320,211 @@ Search.appendIndex(
             "name": "_pluginName",
             "summary": "",
             "url": "classes/NACSL-Utilities-AdminNotice.html#property__pluginName"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType",
+            "name": "EnumAdminNoticeType",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-EnumAdminNoticeType.html"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AERROR",
+            "name": "ERROR",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AWARNING",
+            "name": "WARNING",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003ASUCCESS",
+            "name": "SUCCESS",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AINFO",
+            "name": "INFO",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage",
+            "name": "AdminSettingPage",
+            "summary": "Add\u0020setting\u0020page",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instancing\u0020the\u0020setting\u0020page.",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method___construct"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003AAddField\u0028\u0029",
+            "name": "AddField",
+            "summary": "Add\u0020field\u0020to\u0020a\u0020section",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method_AddField"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003AAddSection\u0028\u0029",
+            "name": "AddSection",
+            "summary": "Add\u0020section\u0020to\u0020setting\u0020page",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method_AddSection"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003AFactory\u0028\u0029",
+            "name": "Factory",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method_Factory"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003ASelectInputView\u0028\u0029",
+            "name": "SelectInputView",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method_SelectInputView"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003ASelectSanitizer\u0028\u0029",
+            "name": "SelectSanitizer",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#method_SelectSanitizer"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003A\u0024optGroupSlug",
+            "name": "optGroupSlug",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#property_optGroupSlug"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003A\u0024optFields",
+            "name": "optFields",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#property_optFields"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\AdminSettingPage\u003A\u003A\u0024sections",
+            "name": "sections",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-AdminSettingPage.html#property_sections"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType",
+            "name": "EnumSettingFieldInputType",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-EnumSettingFieldInputType.html"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ACHECKBOX",
+            "name": "CHECKBOX",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ACOLOR",
+            "name": "COLOR",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ADATE",
+            "name": "DATE",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ADATETIME_LOCAL",
+            "name": "DATETIME_LOCAL",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003AEMAIL",
+            "name": "EMAIL",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003AHIDDEN",
+            "name": "HIDDEN",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003AMONTH",
+            "name": "MONTH",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ANUMBER",
+            "name": "NUMBER",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003APASSWORD",
+            "name": "PASSWORD",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ARADIO",
+            "name": "RADIO",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ARANGE",
+            "name": "RANGE",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ATEXT",
+            "name": "TEXT",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ATEL",
+            "name": "TEL",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ATIME",
+            "name": "TIME",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003AURL",
+            "name": "URL",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003AWEEK",
+            "name": "WEEK",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldInputType\u003A\u003ATEXTAREA",
+            "name": "TEXTAREA",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType",
+            "name": "EnumSettingFieldType",
+            "summary": "",
+            "url": "classes/NACSL-Utilities-EnumSettingFieldType.html"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003ASTRING",
+            "name": "STRING",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003ABOOLEAN",
+            "name": "BOOLEAN",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003AINTERGER",
+            "name": "INTERGER",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003ANUMBER",
+            "name": "NUMBER",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003AARRAY",
+            "name": "ARRAY",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003AOBJECT",
+            "name": "OBJECT",
+            "summary": "",
+            "url": ""
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\EnumSettingFieldType\u003A\u003ADEFAULT",
+            "name": "DEFAULT",
+            "summary": "",
+            "url": ""
         },                {
             "fqsen": "\\NACSL\\Utilities\\AppConstants",
             "name": "AppConstants",
@@ -1316,60 +1626,55 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/NACSL-Utilities-Config.html#property_dependencies"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType",
-            "name": "EnumAdminNoticeType",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IAdminSettingPage",
+            "name": "IAdminSettingPage",
             "summary": "",
-            "url": "classes/NACSL-Utilities-EnumAdminNoticeType.html"
+            "url": "classes/NACSL-Utilities-Interfaces-IAdminSettingPage.html"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AERROR",
-            "name": "ERROR",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IAdminSettingPage\u003A\u003AAddField\u0028\u0029",
+            "name": "AddField",
             "summary": "",
-            "url": ""
+            "url": "classes/NACSL-Utilities-Interfaces-IAdminSettingPage.html#method_AddField"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AWARNING",
-            "name": "WARNING",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IAdminSettingPage\u003A\u003AAddSection\u0028\u0029",
+            "name": "AddSection",
             "summary": "",
-            "url": ""
+            "url": "classes/NACSL-Utilities-Interfaces-IAdminSettingPage.html#method_AddSection"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003ASUCCESS",
-            "name": "SUCCESS",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IAdminSettingPage\u003A\u003AFactory\u0028\u0029",
+            "name": "Factory",
             "summary": "",
-            "url": ""
+            "url": "classes/NACSL-Utilities-Interfaces-IAdminSettingPage.html#method_Factory"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\EnumAdminNoticeType\u003A\u003AINFO",
-            "name": "INFO",
-            "summary": "",
-            "url": ""
-        },                {
-            "fqsen": "\\NACSL\\Utilities\\IHook",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHook",
             "name": "IHook",
             "summary": "Interface\u0020for\u0020basic\u0020Hook\u0020\u005Badmin\u0020and\u0020public\u005D",
-            "url": "classes/NACSL-Utilities-IHook.html"
+            "url": "classes/NACSL-Utilities-Interfaces-IHook.html"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\IHook\u003A\u003AHook\u0028\u0029",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHook\u003A\u003AHook\u0028\u0029",
             "name": "Hook",
             "summary": "No\u0020restricted\u0020hook\u0020\u005Badmin\u0020and\u0020public\u005D",
-            "url": "classes/NACSL-Utilities-IHook.html#method_Hook"
+            "url": "classes/NACSL-Utilities-Interfaces-IHook.html#method_Hook"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\IHookAdmin",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHookAdmin",
             "name": "IHookAdmin",
             "summary": "Interface\u0020for\u0020admin\u0020Hook\u0020exclusively.",
-            "url": "classes/NACSL-Utilities-IHookAdmin.html"
+            "url": "classes/NACSL-Utilities-Interfaces-IHookAdmin.html"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\IHookAdmin\u003A\u003AAdminHook\u0028\u0029",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHookAdmin\u003A\u003AAdminHook\u0028\u0029",
             "name": "AdminHook",
-            "summary": "Restricted\u0020hooks\u0020to\u0020admin\u0020only.",
-            "url": "classes/NACSL-Utilities-IHookAdmin.html#method_AdminHook"
+            "summary": "Admin\u0020restricted\u0020hooks\u0020only.",
+            "url": "classes/NACSL-Utilities-Interfaces-IHookAdmin.html#method_AdminHook"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\IHookPublic",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHookPublic",
             "name": "IHookPublic",
             "summary": "Interface\u0020for\u0020public\u0020Hook\u0020exclusively.",
-            "url": "classes/NACSL-Utilities-IHookPublic.html"
+            "url": "classes/NACSL-Utilities-Interfaces-IHookPublic.html"
         },                {
-            "fqsen": "\\NACSL\\Utilities\\IHookPublic\u003A\u003APublicHook\u0028\u0029",
+            "fqsen": "\\NACSL\\Utilities\\Interfaces\\IHookPublic\u003A\u003APublicHook\u0028\u0029",
             "name": "PublicHook",
-            "summary": "Restricted\u0020hooks\u0020to\u0020public\u0020only.",
-            "url": "classes/NACSL-Utilities-IHookPublic.html#method_PublicHook"
+            "summary": "Public\u0020restricted\u0020hooks\u0020only.",
+            "url": "classes/NACSL-Utilities-Interfaces-IHookPublic.html#method_PublicHook"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -1386,6 +1691,11 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/nacsl-controllers.html"
         },                {
+            "fqsen": "\\NACSL\\Controllers\\Interfaces",
+            "name": "Interfaces",
+            "summary": "",
+            "url": "namespaces/nacsl-controllers-interfaces.html"
+        },                {
             "fqsen": "\\NACSL\\Models",
             "name": "Models",
             "summary": "",
@@ -1396,14 +1706,29 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/nacsl-models-viewmodels.html"
         },                {
+            "fqsen": "\\NACSL\\Models\\ViewModels\\Interfaces",
+            "name": "Interfaces",
+            "summary": "",
+            "url": "namespaces/nacsl-models-viewmodels-interfaces.html"
+        },                {
             "fqsen": "\\NACSL\\Services",
             "name": "Services",
             "summary": "",
             "url": "namespaces/nacsl-services.html"
         },                {
+            "fqsen": "\\NACSL\\Services\\Interfaces",
+            "name": "Interfaces",
+            "summary": "",
+            "url": "namespaces/nacsl-services-interfaces.html"
+        },                {
             "fqsen": "\\NACSL\\Utilities",
             "name": "Utilities",
             "summary": "",
             "url": "namespaces/nacsl-utilities.html"
+        },                {
+            "fqsen": "\\NACSL\\Utilities\\Interfaces",
+            "name": "Interfaces",
+            "summary": "",
+            "url": "namespaces/nacsl-utilities-interfaces.html"
         }            ]
 );
