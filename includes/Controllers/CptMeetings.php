@@ -2,6 +2,8 @@
 namespace NACSL\Controllers;
 
 use NACSL\Services\Interfaces\ICptService;
+use NACSL\Utilities\AdminSettingPageFactory;
+use NACSL\Utilities\EnumSettingFieldType;
 use Timber\Timber;
 
 /**
@@ -16,59 +18,52 @@ class CptMeetings extends CustomPostType
     public function __construct(ICptService $cptServ)
     {
         parent::__construct($cptServ);
-        $this->optGroupSlug = $this->name . "_opt";
-        $this->optNameJours = $this->optGroupSlug . "_jours";
+        $this->optGroupSlug = $this->slug . "_opt";
+        $this->optNameJours = $this->optGroupSlug . "_taxjours";
     }
 
     public function AdminMenu(): void 
-    {        
+    {   
+        $slug = $this->slug;
+        $optGroupSlug = $this->optGroupSlug;
+        $title = $this->model->labels->name;
+        $option = get_option($this->optNameJours);
+        $taxonomies = get_object_taxonomies($slug);
+
         add_submenu_page(
-            "edit.php?post_type=" . $this->name, 
-            "Options des meetings", 
+            "edit.php?post_type=" . $slug, 
+            "Options des " . $title, 
             "Options", 
             "manage_options",
-            $this->optGroupSlug,
-            function(){
-                echo '<div class="wrap">' . get_admin_page_title();
-                echo "<form method='post' action='options.php'>";
-                settings_fields($this->optGroupSlug);
-                do_settings_fields($this->optGroupSlug, 'jours_section');
-                do_settings_sections('jours_section');
-                submit_button();
-                echo "</form></div>";
-            }, 
-        );
+            $optGroupSlug,
+            function() use($optGroupSlug){
+                Timber::render('admin/form/AdminOptionsForm.twig', ['optGroupSlug'=> $optGroupSlug]);                
+            }
+        );     
+        
+        foreach ($taxonomies as $tax) {
+            if( str_contains(strtolower($tax), 'taxjours') && ! $option ){
+                remove_submenu_page("edit.php?post_type=$slug", "edit-tags.php?taxonomy=$tax&amp;post_type=$slug");
+            }
+        }
     }
 
     public function Options(): void
     {
-        //update_option($this->optNameJours, true);
-        $option = get_option($this->optNameJours);
-        $checked = $option ? 'checked' : '';
-        //wp_die(var_export($option));
-        register_setting(
-            $this->optGroupSlug,
-            $this->optNameJours
+        $section = 'nacsl_default_opt_section';
+        $optGroup = new AdminSettingPageFactory($this->optGroupSlug);
+        $optGroup->AddSection($section, 'Taxonomy Jours');
+        $optGroup->AddField(
+            id:$this->optNameJours, 
+            title:'Afficher le sous-menu', 
+            type:EnumSettingFieldType::CHECKBOX,
+            section:$section,
+            args: [
+                'type' => 'boolean',
+                'sanitize_callback' => fn($val) => filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE)
+            ]
         );
-
-        add_settings_section(
-            'jours_section',
-            'holyshit',
-            function(){
-                echo 'section';
-            },
-            $this->optGroupSlug
-        );
-
-        add_settings_field(
-            $this->optNameJours,
-            'Afficher taxonomy Jours',
-            function() use ($option, $checked){
-                echo "<input type='checkbox' $checked id='{$this->optNameJours}' name='{$this->optNameJours}' value='{$option}'>";
-            },
-            $this->optGroupSlug,
-            'jours_section'
-        );
+        $optGroup->BuildPage(); 
     }
 
     public function AdminHook(): void

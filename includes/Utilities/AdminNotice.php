@@ -3,13 +3,19 @@ namespace NACSL\Utilities;
 
 use NACSL\Models\ViewModels\AdminNoticeVM;
 use NACSL\Utilities\AppConstants;
-use NACSL\Utilities\EnumAdminNoticeType;
-use NACSL\Utilities\IHookAdmin;
+use NACSL\Utilities\Interfaces\IHookAdmin;
 use Timber\Timber;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
 
+enum EnumAdminNoticeType: string
+{
+    case ERROR = 'notice-error';
+    case WARNING = 'notice-warning';
+    case SUCCESS = 'notice-success';
+    case INFO = 'notice-info';
+}
 /**
  * Override Administrator notices
  * @package NACSL\Utilities
@@ -39,7 +45,7 @@ class AdminNotice implements IHookAdmin
      * Remove the default Admin notice
      * @return void 
      */
-    public static function RemoveDefault(){
+    public static function RemoveDefaultAdminNotices(){
         add_action('admin_head', function(){
             ?>
             <style>
@@ -83,13 +89,13 @@ class AdminNotice implements IHookAdmin
      */
     public function Views():void
     {
-        Timber::render('_AdminNoticesPartial.twig', $this->_noticeVM->ToArray());
+        Timber::render('admin/_AdminNoticesPartial.twig', $this->_noticeVM->ToArray());
     }
 
     public function AdminHook(): void 
     { 
         if(is_admin()){
-            $this->RemoveDefault();
+            $this->RemoveDefaultAdminNotices();
             add_action( 'admin_notices', array($this, 'Views'));
         };
     }
