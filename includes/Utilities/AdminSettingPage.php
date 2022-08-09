@@ -39,7 +39,6 @@ enum EnumSettingFieldType:string
 }
 /**
  * Add setting page
- * @method __construct(string $option_group) [param: Slug page]
  * @package NACSL\Utilities
  */
 class AdminSettingPage implements IAdminSettingPage
