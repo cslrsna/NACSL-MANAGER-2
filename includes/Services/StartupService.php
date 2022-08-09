@@ -23,8 +23,8 @@ final class StartupService
         if( !get_option(AppConstants::OPT_VERSION))
             update_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
 
-        foreach (self::$colRegister as $cpt) {
-            $cpt->Register();
+        foreach (self::$colRegister as $obj) {
+            $obj->Register();
         }       
 
         flush_rewrite_rules();
@@ -40,8 +40,8 @@ final class StartupService
         AuthorizationService::ActivateDeactivatePluginsAllowed($_REQUEST['action'], $_REQUEST['_wpnonce']);
         update_option(AppConstants::OPT_ACTIVATED, false);
 
-        foreach (self::$colRegister as $cpt) {
-            $cpt->Unregister();
+        foreach (self::$colRegister as $obj) {
+            $obj->Unregister();
         }
 
         flush_rewrite_rules();

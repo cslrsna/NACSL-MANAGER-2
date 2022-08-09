@@ -12,9 +12,6 @@ class TaxJours extends CustomTaxonomy
         $this->description = __("Jours de semaine.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "jours";
         $this->rewrite['slug'] = 'jours';
-        $this->show_ui = true;
-        //$this->show_admin_column=true;
-        $this->show_in_menu = false;
     }
         
 }

@@ -1,0 +1,8 @@
+<div class='wrap'>
+<h1 class='wp-heading-inline'>{{function('get_admin_page_title')}}</h1>
+<form method="POST" action="options.php">
+    {{ function('settings_fields', optGroupSlug) }}
+    {{ function('do_settings_sections', optGroupSlug) }}
+    {{ function('submit_button') }}
+</form>
+</div>

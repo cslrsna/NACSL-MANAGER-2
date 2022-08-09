@@ -9,25 +9,4 @@ use NACSL\Services\Interfaces\ITaxService;
  */
 class TaxJours extends CustomTaxonomy
 {
-    private string $_optShowMenu;
-
-    public function __construct(ITaxService $taxServ, array|string $objType)
-    {
-        parent::__construct($taxServ, $objType);
-        $this->_optShowMenu = $this->model->taxonomy . "_opt_show_menu";
-    }
-
-    public function AdminHook(): void 
-    {
-        parent::AdminHook();
-    }
-
-    public function Options(): void 
-    { 
-        parent::Options();
-    }
-
-    public function AdminMenu(): void
-    {
-    }
 }
