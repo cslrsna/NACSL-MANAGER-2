@@ -2,10 +2,10 @@
 
 namespace NACSL\Utilities;
 
-use NACSL\Utilities\Interfaces\IAdminSettingPageFactory;
+use NACSL\Utilities\Interfaces\IAdminSettingPage;
 use Timber\Timber;
 
-enum EnumSettingFieldType
+enum EnumSettingFieldInputType
 {
     case CHECKBOX;
     case COLOR;
@@ -25,12 +25,24 @@ enum EnumSettingFieldType
     case WEEK;
     case TEXTAREA;
 }
+
+enum EnumSettingFieldType:string
+{
+    //'string', 'boolean', 'integer', 'number', 'array', and 'object'.
+    case STRING = 'string';
+    case BOOLEAN = 'boolean';
+    case INTERGER = 'integer';
+    case NUMBER = 'number';
+    case ARRAY = 'array';
+    case OBJECT = 'object';
+    case DEFAULT = 'default';
+}
 /**
  * Add setting page
  * @method __construct(string $option_group) [param: Slug page]
  * @package NACSL\Utilities
  */
-class AdminSettingPageFactory implements IAdminSettingPageFactory
+class AdminSettingPage implements IAdminSettingPage
 {
     public string $optGroupSlug;
     public array $optFields;
@@ -50,19 +62,26 @@ class AdminSettingPageFactory implements IAdminSettingPageFactory
      * Add field to a section
      * @param string $id 
      * @param string $title 
-     * @param string $type 
+     * @param string $inputType 
      * @param string $section 
      * @return void 
      */
-    public function AddField( string $id, string $title, EnumSettingFieldType $type, string $section='default', array $attr = null, array $args=array()):void
+    public function AddField( 
+        string $id, 
+        string $title, 
+        EnumSettingFieldInputType $inputType = EnumSettingFieldInputType::TEXT, 
+        string $section='default', 
+        array $attr = array(), 
+        EnumSettingFieldType $type = EnumSettingFieldType::DEFAULT
+    ):void
     {
         $this->optFields[] = array(
             'id' => $id,
             'title' => $title,
-            'type' => $type,
+            'inputType' => $inputType,
             'section' => $section,
             'attr' => $attr,
-            'args' => $args
+            'args' => $this->SelectSanitizer($type)
         );
     }
 
@@ -80,7 +99,7 @@ class AdminSettingPageFactory implements IAdminSettingPageFactory
         );
     }
 
-    public function BuildPage():void
+    public function Factory():void
     {
         $page = $this->optGroupSlug;
         foreach ($this->sections as $section) {            
@@ -92,7 +111,7 @@ class AdminSettingPageFactory implements IAdminSettingPageFactory
             );
         }
         foreach ($this->optFields as $field) {
-            $type = $field['type'];
+            $inputType = $field['inputType'];
             $id = $field['id'];
             $title = $field['title'];
             $section = $field['section'];
@@ -108,8 +127,8 @@ class AdminSettingPageFactory implements IAdminSettingPageFactory
             add_settings_field(
                 $id,
                 $title,
-                function() use ($type, $id, $option){
-                    $this->SelectInputView($type, $id, $option);
+                function() use ($inputType, $id, $option){
+                    $this->SelectInputView($inputType, $id, $option);
                 },
                 $page,
                 $section
@@ -117,22 +136,51 @@ class AdminSettingPageFactory implements IAdminSettingPageFactory
         }
     }
 
-    public function SelectInputView(EnumSettingFieldType $type, string $id, $option, array $attr = null):void
+    private function SelectInputView(EnumSettingFieldInputType $inputType, string $id, $option, array $attr = null):void
     {
-        $typeFile = ucfirst(strtolower($type->name));
-        switch ($type) {
-            case EnumSettingFieldType::CHECKBOX:
+        $typeFile = ucfirst(strtolower($inputType->name));
+        switch ($inputType) {
+            case EnumSettingFieldInputType::CHECKBOX:
                 $data = array(
                     'inputChecked' => $option ? 'checked' : '',
                     'optField' => $id,
                     'option' => $option                      
                 );
                 break;
+            case EnumSettingFieldInputType::TEXT:
+                $typeFile = 'Default';
+                $data = array(
+                    'type' => 'text',
+                    'optField' => $id,
+                    'option' => $option                      
+                );
+                break;
             
-            default:
-                # code...
+            default:                
+                $typeFile = 'Default';
+                $data = array(
+                    'type' => 'text',
+                    'optField' => $id,
+                    'option' => $option                      
+                );
                 break;
         }
         Timber::render("admin/form/_input{$typeFile}Partial.twig", $data);
+    }
+
+    private function SelectSanitizer(EnumSettingFieldType $type):mixed
+    {        
+        switch ($type) {
+            case EnumSettingFieldType::BOOLEAN:
+                return [
+                    'type' => 'boolean',
+                    'sanitize_callback' => fn($val) => filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE)
+                ];
+                break;
+            
+            default:
+                return array();
+                break;
+        }
     }
 }

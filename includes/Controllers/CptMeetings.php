@@ -2,8 +2,10 @@
 namespace NACSL\Controllers;
 
 use NACSL\Services\Interfaces\ICptService;
-use NACSL\Utilities\AdminSettingPageFactory;
+use NACSL\Utilities\AdminSettingPage;
+use NACSL\Utilities\EnumSettingFieldInputType;
 use NACSL\Utilities\EnumSettingFieldType;
+use NACSL\Utilities\Interfaces\IAdminSettingPage;
 use Timber\Timber;
 
 /**
@@ -14,12 +16,24 @@ class CptMeetings extends CustomPostType
 {
     public string $optGroupSlug;
     public string $optNameJours;
+    public IAdminSettingPage $optGroup;
 
     public function __construct(ICptService $cptServ)
     {
         parent::__construct($cptServ);
         $this->optGroupSlug = $this->slug . "_opt";
         $this->optNameJours = $this->optGroupSlug . "_taxjours";
+    }
+
+
+    /**
+     * All unregister logic for all costom post type
+     * @return void 
+     */
+    public function Unregister(): void 
+    { 
+        parent::Unregister();
+        unregister_setting($this->optGroupSlug, $this->optNameJours);
     }
 
     public function AdminMenu(): void 
@@ -51,19 +65,16 @@ class CptMeetings extends CustomPostType
     public function Options(): void
     {
         $optSection = 'nacsl_default_opt_section';
-        $optGroup = new AdminSettingPageFactory($this->optGroupSlug);
-        $optGroup->AddSection($optSection, 'Taxonomy Jours');
-        $optGroup->AddField(
+        $this->optGroup = new AdminSettingPage($this->optGroupSlug);
+        $this->optGroup->AddSection($optSection, 'Taxonomy Jours');
+        $this->optGroup->AddField(
             id:$this->optNameJours, 
             title:'Afficher le sous-menu', 
-            type:EnumSettingFieldType::CHECKBOX,
             section:$optSection,
-            args: [
-                'type' => 'boolean',
-                'sanitize_callback' => fn($val) => filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE)
-            ]
+            inputType:EnumSettingFieldInputType::CHECKBOX,
+            type: EnumSettingFieldType::BOOLEAN
         );
-        $optGroup->BuildPage(); 
+        $this->optGroup->Factory(); 
     }
 
     public function AdminHook(): void
