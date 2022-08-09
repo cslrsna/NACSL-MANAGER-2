@@ -50,14 +50,14 @@ class CptMeetings extends CustomPostType
 
     public function Options(): void
     {
-        $section = 'nacsl_default_opt_section';
+        $optSection = 'nacsl_default_opt_section';
         $optGroup = new AdminSettingPageFactory($this->optGroupSlug);
-        $optGroup->AddSection($section, 'Taxonomy Jours');
+        $optGroup->AddSection($optSection, 'Taxonomy Jours');
         $optGroup->AddField(
             id:$this->optNameJours, 
             title:'Afficher le sous-menu', 
             type:EnumSettingFieldType::CHECKBOX,
-            section:$section,
+            section:$optSection,
             args: [
                 'type' => 'boolean',
                 'sanitize_callback' => fn($val) => filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE)
