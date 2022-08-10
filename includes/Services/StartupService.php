@@ -97,6 +97,7 @@ final class StartupService
             );
             return false;
         }
+        validate_plugin_requirements(AppConstants::$basename);
         return true;
     }
 
