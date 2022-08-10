@@ -4,7 +4,13 @@ namespace NACSL\Utilities;
 
 use NACSL\Utilities\Interfaces\IAdminSettingPage;
 use Timber\Timber;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
+/**
+ * HTML input type
+ */
 enum EnumSettingFieldInputType
 {
     case CHECKBOX;
@@ -26,6 +32,9 @@ enum EnumSettingFieldInputType
     case TEXTAREA;
 }
 
+/**
+ * Type of return value
+ */
 enum EnumSettingFieldType:string
 {
     //'string', 'boolean', 'integer', 'number', 'array', and 'object'.
@@ -55,6 +64,7 @@ class AdminSettingPage implements IAdminSettingPage
     public function __construct(string $option_group)
     {
         $this->optGroupSlug = $option_group;
+        $this->sections = array();
     }
 
     /**
@@ -98,17 +108,30 @@ class AdminSettingPage implements IAdminSettingPage
         );
     }
 
+    /**
+     * Admin page builder
+     */
     public function Factory():void
     {
         $page = $this->optGroupSlug;
-        foreach ($this->sections as $section) {            
+        if( count($this->sections) > 0 ):
+            foreach ($this->sections as $section) {            
+                add_settings_section(
+                    $section['id'],
+                    $section['title'],
+                    '', // View
+                    $page
+                );
+            }
+        else:                        
             add_settings_section(
-                $section['id'],
-                $section['title'],
+                'default',
+                '',
                 '', // View
                 $page
             );
-        }
+        endif;
+
         foreach ($this->optFields as $field) {
             $inputType = $field['inputType'];
             $id = $field['id'];
@@ -135,6 +158,20 @@ class AdminSettingPage implements IAdminSettingPage
         }
     }
 
+    /**
+     * HTML input selector
+     * @param EnumSettingFieldInputType $inputType 
+     * @param string $id 
+     * @param mixed $option 
+     * @param array|null $attr 
+     * @return void 
+     * @throws LoaderError 
+     * @throws LoaderError 
+     * @throws RuntimeError 
+     * @throws RuntimeError 
+     * @throws SyntaxError 
+     * @throws SyntaxError 
+     */
     private function SelectInputView(EnumSettingFieldInputType $inputType, string $id, $option, array $attr = null):void
     {
         $typeFile = ucfirst(strtolower($inputType->name));
@@ -167,6 +204,11 @@ class AdminSettingPage implements IAdminSettingPage
         Timber::render("admin/form/_input{$typeFile}Partial.twig", $data);
     }
 
+    /**
+     * Custom sanitizer by input type return
+     * @param EnumSettingFieldType $type 
+     * @return mixed 
+     */
     private function SelectSanitizer(EnumSettingFieldType $type):mixed
     {        
         switch ($type) {

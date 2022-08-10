@@ -1,6 +1,7 @@
 <?php
 namespace NACSL\Controllers;
 
+use NACSL\Services\CptMeetingsService;
 use NACSL\Services\Interfaces\ICptService;
 use NACSL\Utilities\AdminSettingPage;
 use NACSL\Utilities\EnumSettingFieldInputType;
@@ -16,13 +17,17 @@ class CptMeetings extends CustomPostType
 {
     public string $optGroupSlug;
     public string $optNameJours;
+    public string $optNameTypes;
     public IAdminSettingPage $optGroup;
+    private CptMeetingsService $_thisServ;
 
     public function __construct(ICptService $cptServ)
     {
         parent::__construct($cptServ);
+        $this->_thisServ = new CptMeetingsService();
         $this->optGroupSlug = $this->slug . "_opt";
         $this->optNameJours = $this->optGroupSlug . "_taxjours";
+        $this->optNameTypes = $this->optGroupSlug . "_taxtypes";
     }
 
 
@@ -34,46 +39,44 @@ class CptMeetings extends CustomPostType
     { 
         parent::Unregister();
         unregister_setting($this->optGroupSlug, $this->optNameJours);
+        unregister_setting($this->optGroupSlug, $this->optNameTypes);
     }
 
     public function AdminMenu(): void 
     {   
-        $slug = $this->slug;
-        $optGroupSlug = $this->optGroupSlug;
-        $title = $this->model->labels->name;
-        $option = get_option($this->optNameJours);
-        $taxonomies = get_object_taxonomies($slug);
-
-        add_submenu_page(
-            "edit.php?post_type=" . $slug, 
-            "Options des " . $title, 
-            "Options", 
-            "manage_options",
-            $optGroupSlug,
-            function() use($optGroupSlug){
-                Timber::render('admin/form/AdminOptionsForm.twig', ['optGroupSlug'=> $optGroupSlug]);                
-            }
-        );     
-        
-        foreach ($taxonomies as $tax) {
-            if( str_contains(strtolower($tax), 'taxjours') && ! $option ){
-                remove_submenu_page("edit.php?post_type=$slug", "edit-tags.php?taxonomy=$tax&amp;post_type=$slug");
-            }
-        }
+        $this->_thisServ->GetOptionsMenu(
+            $this->slug, 
+            $this->model->labels->name, 
+            $this->optGroupSlug, 
+            array('jours' => $this->optNameJours, 'types' => $this->optNameTypes),
+            array('optGroupSlug'=> $this->optGroupSlug)
+        );
     }
 
     public function Options(): void
     {
-        $optSection = 'nacsl_default_opt_section';
         $this->optGroup = new AdminSettingPage($this->optGroupSlug);
-        $this->optGroup->AddSection($optSection, 'Taxonomy Jours');
+
+        $optSectionJours = 'nacsl_opt_section_jours';
+        $this->optGroup->AddSection($optSectionJours, "Catégorie: Jours");
         $this->optGroup->AddField(
             id:$this->optNameJours, 
-            title:'Afficher le sous-menu', 
-            section:$optSection,
+            title:"Afficher le sous-menu", 
+            section:$optSectionJours,
             inputType:EnumSettingFieldInputType::CHECKBOX,
             type: EnumSettingFieldType::BOOLEAN
         );
+
+        $optSectionTypes = 'nacsl_opt_section_types';
+        $this->optGroup->AddSection($optSectionTypes, "Catégorie: Types des réunions");
+        $this->optGroup->AddField(
+            id:$this->optNameTypes, 
+            title:"Afficher le sous-menu", 
+            section:$optSectionTypes,
+            inputType:EnumSettingFieldInputType::CHECKBOX,
+            type: EnumSettingFieldType::BOOLEAN
+        );
+
         $this->optGroup->Factory(); 
     }
 
