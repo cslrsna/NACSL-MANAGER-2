@@ -13,6 +13,11 @@ abstract class CustomPostType implements ICptController
 {
     protected ICptService $_CptServ;
     public ModelsCustomPostType $model;
+
+    /**
+     * @uses NACSL\Models\CustomPostType::post_type
+     * @var string
+     */
     public string $slug;
     
     public function __construct(ICptService $cptServ)

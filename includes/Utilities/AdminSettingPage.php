@@ -52,8 +52,8 @@ enum EnumSettingFieldType:string
  */
 class AdminSettingPage implements IAdminSettingPage
 {
-    public string $optGroupSlug;
-    public array $optFields;
+    public string $option_group;
+    public array $fields;
     public array $sections;
 
     /**
@@ -63,8 +63,9 @@ class AdminSettingPage implements IAdminSettingPage
      */
     public function __construct(string $option_group)
     {
-        $this->optGroupSlug = $option_group;
+        $this->option_group = $option_group;
         $this->sections = array();
+        $this->fields = array();
     }
 
     /**
@@ -84,7 +85,7 @@ class AdminSettingPage implements IAdminSettingPage
         EnumSettingFieldType $type = EnumSettingFieldType::DEFAULT
     ):void
     {
-        $this->optFields[] = array(
+        $this->fields[] = array(
             'id' => $id,
             'title' => $title,
             'inputType' => $inputType,
@@ -113,7 +114,7 @@ class AdminSettingPage implements IAdminSettingPage
      */
     public function Factory():void
     {
-        $page = $this->optGroupSlug;
+        $page = $this->option_group;
         if( count($this->sections) > 0 ):
             foreach ($this->sections as $section) {            
                 add_settings_section(
@@ -132,7 +133,7 @@ class AdminSettingPage implements IAdminSettingPage
             );
         endif;
 
-        foreach ($this->optFields as $field) {
+        foreach ($this->fields as $field) {
             $inputType = $field['inputType'];
             $id = $field['id'];
             $title = $field['title'];
@@ -215,7 +216,7 @@ class AdminSettingPage implements IAdminSettingPage
             case EnumSettingFieldType::BOOLEAN:
                 return [
                     'type' => 'boolean',
-                    'sanitize_callback' => fn($val) => filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE)
+                    'sanitize_callback' => fn($val) => rest_sanitize_boolean(filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE))
                 ];
                 break;
             
