@@ -167,6 +167,7 @@ class AdminSettingPage implements IAdminSettingPage
 
     private function LoadFormScript():void
     {
+
         if( isset($_REQUEST['page']) && str_contains($_REQUEST['page'], AppConstants::PREFIX) && str_contains($_REQUEST['page'], "_opt") )
         {
             add_action('admin_enqueue_scripts', function(){
