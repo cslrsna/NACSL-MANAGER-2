@@ -13,6 +13,14 @@ use WP_REST_Controller;
  */
 abstract class CustomPostType
 {
+
+    /**
+     * Option group slug for register_setting()
+     * @see https://developer.wordpress.org/reference/functions/register_setting/
+     * @var string
+     */
+    public string $option_group = '';
+
     /**
      * (Required) Post type key. Must not exceed 20 characters and may only contain lowercase alphanumeric characters, dashes, and underscores. See sanitize_key().
      * @see https://developer.wordpress.org/reference/functions/sanitize_key/

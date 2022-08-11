@@ -26,7 +26,7 @@ interface ICptController extends IHook, IHookAdmin, IHookPublic
      * Add admin menu
      * @return void 
      */
-    public function AdminMenu():void;
+    public function AdminOptionsSubmenu():void;
 
     /**
      * Add options to the custom post type
