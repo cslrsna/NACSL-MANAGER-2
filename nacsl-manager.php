@@ -77,8 +77,5 @@ register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [StartupService::class, 'Deactivate'] );
 
 $app = App::GetInstance();
-$app->Init();
-
-/* add_action('wp', function(){
-    exit(var_export(get_taxonomy('nacsl_taxjours')));
-}); */
+$app->Init(array(StartupService::class, 'Init'));
+$app->Execute(StartupService::$colRegister);

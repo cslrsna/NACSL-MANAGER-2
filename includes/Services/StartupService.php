@@ -12,6 +12,15 @@ use NACSL\Utilities\EnumAdminNoticeType;
  */
 final class StartupService
 {
+    public static function Init():void
+    {
+        self::LoadAssets();
+        self::Dependencies();
+        self::Update();
+        self::IsInstall();
+    }
+
+
     public static array $colRegister = array();
     /**
      * Activate NACSL-MANAGER

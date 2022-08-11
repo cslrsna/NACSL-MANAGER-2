@@ -1,12 +1,9 @@
 <?php
 namespace NACSL;
 
-use NACSL\Controllers\AdminMain;
-use NACSL\Controllers\CptGroups;
-use NACSL\Controllers\Interfaces\IAdminController;
-use NACSL\Models\ViewModels\AdminMainVM;
-use NACSL\Services\CptService;
-use NACSL\Services\StartupService;
+use NACSL\Utilities\Interfaces\IHook;
+use NACSL\Utilities\Interfaces\IHookAdmin;
+use NACSL\Utilities\Interfaces\IHookPublic;
 
 /**
  * NACSL-MANAGER App
@@ -29,19 +26,25 @@ final class App
 
     /**
      * NACSL-MANAGER App initialization
+     * @param array $starup 
+     * @return void 
      */
-    public function Init()
+    public function Init(array $starup)
     {
-        // Startup
-        StartupService::LoadAssets();
-        StartupService::Dependencies();
-        StartupService::Update();
-        StartupService::IsInstall();
-        
-        foreach (StartupService::$colRegister as $key => $register) {
-            $register->Hook();
-            $register->AdminHook();
-            $register->PublicHook();
+        call_user_func($starup);
+    }
+
+    public function Execute($actions):void
+    {
+        foreach ($actions as $action) {
+            switch (true) {
+                case $action instanceof IHook:
+                    $action->Hook();
+                case $action instanceof IHookAdmin:
+                    $action->AdminHook();
+                case $action instanceof IHookPublic:
+                    $action->PublicHook();
+            }
         }
     }
 }
