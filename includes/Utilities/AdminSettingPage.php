@@ -52,6 +52,9 @@ enum EnumSettingFieldType:string
  */
 class AdminSettingPage implements IAdminSettingPage
 {
+    public EnumSettingFieldInputType $fieldinputType;
+    public EnumSettingFieldType $fieldType;
+    
     public string $option_group;
     public array $fields;
     public array $sections;
@@ -69,11 +72,27 @@ class AdminSettingPage implements IAdminSettingPage
     }
 
     /**
-     * Add field to a section
-     * @param string $id 
-     * @param string $title 
-     * @param string $inputType 
-     * @param string $section 
+     * Add section to setting page
+     * @param string $suffixId Section id:  _$this->option_group . "\_section\_" ._ __$SuffixId__
+     * @param string $title Section title
+     * @return void 
+     */
+    public function AddSection(string $suffixId, string $title):void
+    {
+        $this->sections[] = array(
+            'id' => $this->option_group . "_section_" . $suffixId,
+            'title' => $title         
+        );
+    }
+
+    /**
+     * Add field into section
+     * @param string $id field id
+     * @param string $title Field title
+     * @param EnumSettingFieldInputType $inputType
+     * @param string $section Section id
+     * @param array $attr additionnal HTML attributes [key => val]
+     * @param EnumSettingFieldType $type 
      * @return void 
      */
     public function AddField( 
@@ -89,28 +108,14 @@ class AdminSettingPage implements IAdminSettingPage
             'id' => $id,
             'title' => $title,
             'inputType' => $inputType,
-            'section' => $section,
+            'section' => $this->option_group . "_section_" . $section,
             'attr' => $attr,
             'args' => $this->SelectSanitizer($type)
         );
     }
 
     /**
-     * Add section to setting page
-     * @param string $id 
-     * @param string $title 
-     * @return void 
-     */
-    public function AddSection(string $id, string $title):void
-    {
-        $this->sections[] = array(
-            'id' => $id,
-            'title' => $title         
-        );
-    }
-
-    /**
-     * Admin page builder
+     * Setting page builder
      */
     public function Factory():void
     {
@@ -157,14 +162,35 @@ class AdminSettingPage implements IAdminSettingPage
                 $section
             );
         }
+        $this->LoadFormScript();
+    }
+
+    private function LoadFormScript():void
+    {
+        if( isset($_REQUEST['page']) && str_contains($_REQUEST['page'], AppConstants::PREFIX) && str_contains($_REQUEST['page'], "_opt") )
+        {
+            add_action('admin_enqueue_scripts', function(){
+                $admin = AppConstants::PREFIX . 'admin_form';
+                $url = AppConstants::$adminUrl;
+    
+                wp_register_script(
+                    $admin,
+                    "$url/js/$admin.js",
+                    array(),
+                    false,
+                    true
+                );
+                wp_enqueue_script($admin);
+            });
+        }
     }
 
     /**
      * HTML input selector
      * @param EnumSettingFieldInputType $inputType 
-     * @param string $id 
-     * @param mixed $option 
-     * @param array|null $attr 
+     * @param string $id input id
+     * @param mixed $option input value
+     * @param array|null $attr input attribute
      * @return void 
      * @throws LoaderError 
      * @throws LoaderError 
@@ -215,8 +241,14 @@ class AdminSettingPage implements IAdminSettingPage
         switch ($type) {
             case EnumSettingFieldType::BOOLEAN:
                 return [
-                    'type' => 'boolean',
-                    'sanitize_callback' => fn($val) => rest_sanitize_boolean(filter_var($val,FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE))
+                    'type' => EnumSettingFieldType::BOOLEAN->value,
+                    'sanitize_callback' => fn($val) => rest_sanitize_boolean(filter_var(esc_attr($val),FILTER_VALIDATE_BOOL,FILTER_NULL_ON_FAILURE))
+                ];
+                break;
+            case EnumSettingFieldType::STRING:
+                return [
+                    'type' => EnumSettingFieldType::STRING->value,
+                    'sanitize_callback' => fn($val) => filter_var(esc_attr($val), FILTER_SANITIZE_FULL_SPECIAL_CHARS)
                 ];
                 break;
             

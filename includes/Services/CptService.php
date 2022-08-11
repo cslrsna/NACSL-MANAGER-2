@@ -15,17 +15,17 @@ class CptService implements ICptService
     { 
         $modelName = "NACSL\Models\\$name";
         $viewLabelModel = "NACSL\Models\ViewModels\\{$name}LabelsVM";
-        $data = new $modelName($name, new $viewLabelModel );
-        return $data;
+        $model = new $modelName($name, new $viewLabelModel );
+        $model->option_group = $model->post_type . "_opt";
+        return $model;
     }
     
-    public function GetTaxSubmenuOptions( string $view, CptModel $model):void
+    public function BuildSubmenuOptions( string $view, CptModel $model):void
     {
-        $post_type = $model->post_type;
-        $option_group = $post_type . "_opt";
+        $option_group = $model->option_group;
 
         add_submenu_page(
-            "edit.php?post_type=" . $post_type, 
+            "edit.php?post_type=" . $model->post_type, 
             "Options des " . $model->labels->name, 
             "Options", 
             "manage_options",
@@ -51,6 +51,17 @@ class CptService implements ICptService
         }        
     }
 
+    /**
+     * Get taxonomies array for admin option page.
+     * @key [option_group] => Slug admin page
+     * @key [fields] => array of taxonomy option field
+     * @key [fields][taxonomy] => Taxonomy slug
+     * @key [fields][id] => Setting field slug
+     * @key [fields][title] => Setting field title
+     * @key [fields][showSubmenu] => Setting field option slug
+     * @param string $post_type 
+     * @return mixed 
+     */
     public function GetTaxOptions (string $post_type):mixed
     {
         $option_group = $post_type . "_opt";
@@ -70,18 +81,23 @@ class CptService implements ICptService
         );
     }
 
+    /**
+     * Taxonomies settings builder
+     * @param array $options NACSL\Services\CptService::GetTaxOptions()
+     * @return void 
+     */
     public function TaxOptionsFactory(array $options):void
     {
         $optGroup = new AdminSettingPage($options['option_group']);
 
-        $sectionDefault = $options['option_group'] . "_section_categories";        
-        $optGroup->AddSection($sectionDefault, "Afficher les taxonomies");
+        $sectionId = "categories";        
+        $optGroup->AddSection($sectionId, "Afficher les taxonomies");
 
         foreach ($options['fields'] as $field) {            
             $optGroup->AddField(
                 id: $field['id'], 
                 title:  $field['title'], 
-                section:$sectionDefault,
+                section:$sectionId,
                 inputType:EnumSettingFieldInputType::CHECKBOX,
                 type: EnumSettingFieldType::BOOLEAN
             );

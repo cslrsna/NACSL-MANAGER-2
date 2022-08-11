@@ -14,6 +14,7 @@ abstract class CustomPostType implements ICptController
     protected ICptService $_CptServ;
     public CptModel $model;
     private array $taxSubmenuOptions = array();
+    protected bool $hasOptions = false;
 
     /**
      * @uses NACSL\Models\CustomPostType::post_type
@@ -41,7 +42,7 @@ abstract class CustomPostType implements ICptController
                 unregister_setting($this->taxSubmenuOptions['option_group'], $tax['id']);
             }
 
-        unregister_post_type($this->model->post_type);
+        unregister_post_type($this->slug);
     }
     
     /**
@@ -50,23 +51,35 @@ abstract class CustomPostType implements ICptController
      */
     public function Register(): void 
     {
-        register_post_type($this->model->post_type, $this->model->ToArray());
+        register_post_type($this->slug, $this->model->ToArray());
     }    
 
-    public function AdminMenu(): void 
+    /**
+     * Add admin custom post type submenu
+     * @return void 
+     */
+    public function AdminOptionsSubmenu(): void 
     {   
-        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+        if( get_taxonomies( ['object_type' => [$this->slug]] ) || $this->hasOptions )
         {
-            $this->taxSubmenuOptions = $this->_CptServ->GetTaxOptions($this->slug);
-            $this->_CptServ->GetTaxSubmenuOptions('admin/form/AdminOptionsForm.twig', $this->model );
-            $this->_CptServ->ShowTaxSubmenuOptions($this->slug, $this->taxSubmenuOptions['fields']);
+            $this->_CptServ->BuildSubmenuOptions('admin/form/AdminOptionsForm.twig', $this->model );
+            
+            if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+            {
+                $this->taxSubmenuOptions = $this->_CptServ->GetTaxOptions($this->slug);
+                $this->_CptServ->ShowTaxSubmenuOptions($this->slug, $this->taxSubmenuOptions['fields']);
+            }
         }
     }
 
+    /**
+     * Custom post type options
+     * @return void 
+     */
     public function Options(): void
     {
         if( get_taxonomies( ['object_type' => [$this->slug]] ) )
-            $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions);
+            $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions);        
     }
 
     /**
@@ -86,7 +99,7 @@ abstract class CustomPostType implements ICptController
     { 
         if( is_admin())
         {
-            add_action('admin_menu', [$this, 'AdminMenu']);
+            add_action('admin_menu', [$this, 'AdminOptionsSubmenu']);
             add_action('admin_init', [$this, 'Options']);
         }       
     }
