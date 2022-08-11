@@ -7,8 +7,4 @@ namespace NACSL\Controllers;
  */
 class CptGroups extends CustomPostType
 {
-
-    public function AdminMenu(): void { }
-
-    public function Options(): void { }
 }

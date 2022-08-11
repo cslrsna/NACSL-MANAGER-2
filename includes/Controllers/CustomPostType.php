@@ -2,7 +2,7 @@
 namespace NACSL\Controllers;
 
 use NACSL\Controllers\Interfaces\ICptController;
-use NACSL\Models\CustomPostType as ModelsCustomPostType;
+use NACSL\Models\CustomPostType as CptModel;
 use NACSL\Services\Interfaces\ICptService;
 
 /**
@@ -12,7 +12,8 @@ use NACSL\Services\Interfaces\ICptService;
 abstract class CustomPostType implements ICptController
 {
     protected ICptService $_CptServ;
-    public ModelsCustomPostType $model;
+    public CptModel $model;
+    private array $taxSubmenuOptions = array();
 
     /**
      * @uses NACSL\Models\CustomPostType::post_type
@@ -35,6 +36,11 @@ abstract class CustomPostType implements ICptController
      */
     public function Unregister(): void 
     { 
+        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+            foreach ($this->taxSubmenuOptions['taxonomies'] as $tax) {
+                unregister_setting($this->taxSubmenuOptions['option_group'], $tax['id']);
+            }
+
         unregister_post_type($this->model->post_type);
     }
     
@@ -45,10 +51,26 @@ abstract class CustomPostType implements ICptController
     public function Register(): void 
     {
         register_post_type($this->model->post_type, $this->model->ToArray());
+    }    
+
+    public function AdminMenu(): void 
+    {   
+        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+        {
+            $this->taxSubmenuOptions = $this->_CptServ->GetTaxOptions($this->slug);
+            $this->_CptServ->GetTaxSubmenuOptions('admin/form/AdminOptionsForm.twig', $this->model );
+            $this->_CptServ->ShowTaxSubmenuOptions($this->slug, $this->taxSubmenuOptions['fields']);
+        }
+    }
+
+    public function Options(): void
+    {
+        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+            $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions);
     }
 
     /**
-     * No restricted hook [admin and public] for all custom post type
+     * Standard hook no restriction.
      * @return void 
      */
     public function Hook(): void 
@@ -56,7 +78,22 @@ abstract class CustomPostType implements ICptController
         add_action('init', [$this, 'Register']);
     }
 
-    public function AdminHook(): void { }
+    /**
+     * Admin hooks only
+     * @return void 
+     */
+    public function AdminHook(): void 
+    { 
+        if( is_admin())
+        {
+            add_action('admin_menu', [$this, 'AdminMenu']);
+            add_action('admin_init', [$this, 'Options']);
+        }       
+    }
 
+    /**
+     * Public hooks only
+     * @return void 
+     */
     public function PublicHook(): void { }
 }
