@@ -132,7 +132,7 @@ abstract class CustomPostType
      * The string to use to build the read, edit, and delete capabilities. May be passed as an array to allow for alternative plurals when using this argument as a base to construct the capabilities, e.g. array('story', 'stories'). Default 'post'.
      * @var string|array
      */
-    public string|array $capability_type;       // type string|array Default 'post';
+    public string|array $capability_type = 'page';       // type string|array Default 'post';
     
     /**
      * (string[]) Array of capabilities for this post type. $capability_type is used as a base to construct capabilities by default. See get_post_type_capabilities().

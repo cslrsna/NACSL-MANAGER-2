@@ -3,11 +3,6 @@ namespace NACSL\Controllers;
 
 use NACSL\Services\CptMeetingsService;
 use NACSL\Services\Interfaces\ICptService;
-use NACSL\Utilities\AdminSettingPage;
-use NACSL\Utilities\EnumSettingFieldInputType;
-use NACSL\Utilities\EnumSettingFieldType;
-use NACSL\Utilities\Interfaces\IAdminSettingPage;
-use Timber\Timber;
 
 /**
  * Custom post type controller for the Area service committees meetings.
@@ -15,21 +10,14 @@ use Timber\Timber;
  */
 class CptMeetings extends CustomPostType
 {
-    public string $optGroupSlug;
-    public string $optNameJours;
-    public string $optNameTypes;
-    public IAdminSettingPage $optGroup;
-    private CptMeetingsService $_thisServ;
+    private array $taxSubmenuOptions = array();
+    private CptMeetingsService $_meetingsServ;
 
     public function __construct(ICptService $cptServ)
     {
         parent::__construct($cptServ);
-        $this->_thisServ = new CptMeetingsService();
-        $this->optGroupSlug = $this->slug . "_opt";
-        $this->optNameJours = $this->optGroupSlug . "_taxjours";
-        $this->optNameTypes = $this->optGroupSlug . "_taxtypes";
+        $this->_meetingsServ = new CptMeetingsService();
     }
-
 
     /**
      * All unregister logic for all costom post type
@@ -38,46 +26,21 @@ class CptMeetings extends CustomPostType
     public function Unregister(): void 
     { 
         parent::Unregister();
-        unregister_setting($this->optGroupSlug, $this->optNameJours);
-        unregister_setting($this->optGroupSlug, $this->optNameTypes);
+        foreach ($this->taxSubmenuOptions['taxonomies'] as $tax) {
+            unregister_setting($this->taxSubmenuOptions['option_group'], $tax['id']);
+        }
     }
 
     public function AdminMenu(): void 
     {   
-        $this->_thisServ->GetOptionsMenu(
-            $this->slug, 
-            $this->model->labels->name, 
-            $this->optGroupSlug, 
-            array('jours' => $this->optNameJours, 'types' => $this->optNameTypes),
-            array('optGroupSlug'=> $this->optGroupSlug)
-        );
+        $this->taxSubmenuOptions = $this->_meetingsServ->GetTaxOptions($this->slug);
+        $this->_meetingsServ->GetTaxSubmenuOptions('admin/form/AdminOptionsForm.twig', $this->model );
+        $this->_meetingsServ->ShowTaxSubmenuOptions($this->slug, $this->taxSubmenuOptions['fields']);
     }
 
     public function Options(): void
     {
-        $this->optGroup = new AdminSettingPage($this->optGroupSlug);
-
-        $optSectionJours = 'nacsl_opt_section_jours';
-        $this->optGroup->AddSection($optSectionJours, "Catégorie: Jours");
-        $this->optGroup->AddField(
-            id:$this->optNameJours, 
-            title:"Afficher le sous-menu", 
-            section:$optSectionJours,
-            inputType:EnumSettingFieldInputType::CHECKBOX,
-            type: EnumSettingFieldType::BOOLEAN
-        );
-
-        $optSectionTypes = 'nacsl_opt_section_types';
-        $this->optGroup->AddSection($optSectionTypes, "Catégorie: Types des réunions");
-        $this->optGroup->AddField(
-            id:$this->optNameTypes, 
-            title:"Afficher le sous-menu", 
-            section:$optSectionTypes,
-            inputType:EnumSettingFieldInputType::CHECKBOX,
-            type: EnumSettingFieldType::BOOLEAN
-        );
-
-        $this->optGroup->Factory(); 
+        $this->_meetingsServ->TaxOptionsFactory($this->taxSubmenuOptions);
     }
 
     public function AdminHook(): void
