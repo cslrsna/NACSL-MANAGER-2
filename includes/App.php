@@ -34,7 +34,12 @@ final class App
         call_user_func($starup);
     }
 
-    public function Execute($actions):void
+    /**
+     * Execute NACSL App
+     * @param array $actions 
+     * @return void 
+     */
+    public function Execute(array $actions):void
     {
         foreach ($actions as $action) {
             switch (true) {
