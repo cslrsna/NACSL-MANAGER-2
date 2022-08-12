@@ -8,8 +8,8 @@ class TaxTypesLabelsVM extends TaxLabelsVM
     public function __construct()
     {
         $td = AppConstants::TEXT_DOMAIN;
-        $this->name =                       __("Types des réunion", $td);
-        $this->singular_name =              __("Type des réunion", $td);
+        $this->name =                       __("Types d'auditoire", $td);
+        $this->singular_name =              __("Type d'auditoire", $td);
         $this->search_items =               __("Recherche par type", $td);
         $this->popular_items =              __("Types populaires", $td);
         $this->all_items =                  __("Tous les types", $td);
