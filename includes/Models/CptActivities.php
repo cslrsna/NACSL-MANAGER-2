@@ -9,14 +9,14 @@ use NACSL\Utilities\AppConstants;
  * @see https://developer.wordpress.org/reference/functions/register_post_type/
  * @package NACSL\Models
  */
-class CptGroups extends CustomPostType
+class CptActivities extends CustomPostType
 {
     public function __construct(string $name, CptLabelsVM $labels)
     {
         parent::__construct($name, $labels);
-        $this->description = __("Groupes faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
-        $this->rest_base = "groupes";
-        $this->menu_position = -3;
-        $this->rewrite['slug'] = 'groupes';
+        $this->description = __("Activités de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
+        $this->rest_base = "activites";
+        $this->menu_position = -2;
+        $this->rewrite['slug'] = 'activites';
     }    
 }

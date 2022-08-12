@@ -35,6 +35,7 @@ use NACSL\App;
 use NACSL\Controllers\CptGroups;
 use NACSL\Controllers\CptMeetings;
 use NACSL\Controllers\CptSubCom;
+use NACSL\Controllers\CptActivities;
 use NACSL\Controllers\TaxJours;
 use NACSL\Controllers\TaxTypes;
 use NACSL\Services\CptService;
@@ -69,8 +70,9 @@ StartupService::$colRegister = array(
     'CptGroups' => new CptGroups(new CptService()),
     'CptMeetings' => new CptMeetings(new CptService()),
     'CptSubCom' => new CptSubCom(new CptService()),
-    'TaxJours' => new TaxJours(new TaxService(), 'CptMeetings'),
-    'TaxTypes' => new TaxTypes(new TaxService(), 'CptMeetings'),
+    'CptActivities' => new CptActivities(new CptService()),
+    'TaxJours' => new TaxJours(new TaxService(), array('CptMeetings', 'CptActivities')),
+    'TaxTypes' => new TaxTypes(new TaxService(), array('CptMeetings', 'CptActivities')),
 );
 
 

@@ -16,7 +16,7 @@ class CptSubCom extends CustomPostType
         parent::__construct($name, $labels);
         $this->description = __("Sous-comités faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "sous-comites";
-        $this->menu_position = -12;
+        $this->menu_position = -4;
         $this->rewrite['slug'] = 'sous-comites';
     }    
 }
