@@ -25,16 +25,6 @@ final class App
     }
 
     /**
-     * NACSL-MANAGER App initialization
-     * @param array $starup 
-     * @return void 
-     */
-    public function Init(array $starup)
-    {
-        call_user_func($starup);
-    }
-
-    /**
      * Execute NACSL App
      * @param array $actions 
      * @return void 
