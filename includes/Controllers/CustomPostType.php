@@ -37,7 +37,7 @@ abstract class CustomPostType implements ICptController
      */
     public function Unregister(): void 
     { 
-        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+        if( get_object_taxonomies( $this->slug ) )
             foreach ($this->taxSubmenuOptions['taxonomies'] as $tax) {
                 unregister_setting($this->taxSubmenuOptions['option_group'], $tax['id']);
             }
@@ -60,11 +60,11 @@ abstract class CustomPostType implements ICptController
      */
     public function AdminOptionsSubmenu(): void 
     {   
-        if( get_taxonomies( ['object_type' => [$this->slug]] ) || $this->hasOptions )
+        if( get_object_taxonomies( $this->slug ) || $this->hasOptions )
         {
             $this->_CptServ->BuildSubmenuOptions('admin/form/AdminOptionsForm.twig', $this->model );
             
-            if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+            if( get_object_taxonomies( $this->slug ) )
             {
                 $this->taxSubmenuOptions = $this->_CptServ->GetTaxOptions($this->slug);
                 $this->_CptServ->ShowTaxSubmenuOptions($this->slug, $this->taxSubmenuOptions['fields']);
@@ -78,7 +78,7 @@ abstract class CustomPostType implements ICptController
      */
     public function Options(): void
     {
-        if( get_taxonomies( ['object_type' => [$this->slug]] ) )
+        if( get_object_taxonomies( $this->slug ) )
             $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions);        
     }
 

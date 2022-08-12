@@ -16,7 +16,7 @@ class CptMeetings extends CustomPostType
         parent::__construct($name, $labels);
         $this->description = __("Réunions faisant partie de Narcotique Anonymes.", AppConstants::TEXT_DOMAIN);
         $this->rest_base = "reunions";
-        $this->menu_position = -10;
+        $this->menu_position = -1;
         $this->rewrite['slug'] = 'reunions';
     }    
 }
