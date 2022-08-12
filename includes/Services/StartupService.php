@@ -45,7 +45,7 @@ final class StartupService
         }       
 
         flush_rewrite_rules();
-        update_option(AppConstants::OPT_ACTIVATED,self::Dependencies());
+        update_option(AppConstants::OPT_ACTIVATED,true);
     }
     
     /**
@@ -54,7 +54,9 @@ final class StartupService
      */
     public static function Deactivate():void
     {
-        AuthorizationService::ActivateDeactivatePluginsAllowed($_REQUEST['action'], $_REQUEST['_wpnonce']);
+        if(isset($_REQUEST['action']))
+            AuthorizationService::ActivateDeactivatePluginsAllowed($_REQUEST['action'], $_REQUEST['_wpnonce']);
+
         update_option(AppConstants::OPT_ACTIVATED, false);
 
         foreach (self::$colRegister as $obj) {
@@ -91,10 +93,11 @@ final class StartupService
 
     /**
      * Check dependencies and deactivate plugin if is missing some dependencies.
-     * @return bool 
+     * @return void 
      */
-    public static function Dependencies():bool
+    public static function Dependencies():void
     {
+        validate_plugin_requirements(AppConstants::$basename);
         $requireDep = array();
         foreach (Config::$dependencies as $plugin => $basename) {
             if( ! is_plugin_active($basename) )
@@ -103,19 +106,15 @@ final class StartupService
             }
         }
         if( count($requireDep) > 0 ) 
-        {
-            deactivate_plugins(AppConstants::$basename, true);
-            update_option(AppConstants::OPT_ACTIVATED, false);
-            flush_rewrite_rules();          
+        {       
             new AdminNotice(
                 EnumAdminNoticeType::ERROR,
                 __("Dépendances",AppConstants::TEXT_DOMAIN),
                 __("</strong> Certaines dépendances sont manquantes. Veuillez installer et activer ces extensions avant d'activer le gestionnaire de réunions de Narcotiques Anonymes. <hr><b>Liste des extensions manquantes:</b><br><i>", AppConstants::TEXT_DOMAIN) . join(' ,', $requireDep) . "</i>"
             );
-            return false;
+            deactivate_plugins(AppConstants::$basename);
+            update_option(AppConstants::OPT_ACTIVATED, false); 
         }
-        validate_plugin_requirements(AppConstants::$basename);
-        return true;
     }
 
     /**

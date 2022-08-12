@@ -63,16 +63,7 @@ AppConstants::$version = AppConstants::$data['Version'];
 
 Timber::$locations = __DIR__ . "/includes/Views";
 
-//--------------------- FOR DEV
-global $NACSL_DEBUG;
-$NACSL_DEBUG = function($var){
-    $file = __DIR__ . '/nacslDebug.json';
-    file_put_contents($file, json_encode($var));
-};
-/* 
-global $NACSL_DEBUG;
-$NACSL_DEBUG( $_REQUEST ); 
-*/
+
 
 StartupService::$colRegister = array(
     'CptGroups' => new CptGroups(new CptService()),
@@ -86,7 +77,17 @@ StartupService::$colRegister = array(
 register_activation_hook( __FILE__, [StartupService::class, 'Activate'] );
 register_deactivation_hook( __FILE__, [StartupService::class, 'Deactivate'] );
 
-$app = App::GetInstance();
-$app->Init(array(StartupService::class, 'Init'));
-$app->Execute(StartupService::$colRegister);
+StartupService::Init();
 
+if( is_plugin_active(plugin_basename(__file__)) )
+{
+    $app = App::GetInstance();
+    $app->Execute(StartupService::$colRegister);
+}
+
+//--------------------- FOR DEV ONLY
+
+function NACSL_DEBUG($var){
+    $file = __DIR__ . '/nacslDebug.json';
+    file_put_contents($file, json_encode($var));
+};
