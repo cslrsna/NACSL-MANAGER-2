@@ -121,7 +121,7 @@ abstract class CustomTaxonomy
      * @see https://developer.wordpress.org/reference/functions/post_tags_meta_box/
      * @var bool|array|string callable
      */
-    public bool|array|string $meta_box_cb;
+    public bool|array|string $meta_box_cb = false;
     
     /**
      * Callback function for sanitizing taxonomy data saved from a meta box. If no callback is defined, an appropriate one is determined based on the value of $meta_box_cb.
