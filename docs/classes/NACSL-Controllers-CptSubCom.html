@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-            <title>NACSL-MANAGER</title>
+            <title>Documentation</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="../">
@@ -24,7 +24,7 @@
     </head>
 <body id="top">
     <header class="phpdocumentor-header phpdocumentor-section">
-    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">NACSL-MANAGER</a></h1>
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Documentation</a></h1>
     <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
     <label class="phpdocumentor-header__menu-icon" for="menu-button">
         <i class="fas fa-bars"></i>
@@ -73,6 +73,10 @@
             </li>
                     <li>
                 <a href="namespaces/nacsl-utilities.html" class="">Utilities</a>
+                
+            </li>
+                    <li>
+                <a href="namespaces/nacsl-views.html" class="">Views</a>
                 
             </li>
             </ul>
@@ -190,6 +194,20 @@
 </dt>
 <dd></dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/NACSL-Controllers-CustomPostType.html#property_hasOptions">$hasOptions</a>
+    <span>
+                        &nbsp;: bool            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/NACSL-Controllers-CustomPostType.html#property_taxSubmenuOptions">$taxSubmenuOptions</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/NACSL-Controllers-CustomPostType.html#method___construct">__construct()</a>
     <span>
@@ -202,35 +220,35 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Admin hooks only</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/NACSL-Controllers-CptSubCom.html#method_AdminMenu">AdminMenu()</a>
+    <a href="classes/NACSL-Controllers-CustomPostType.html#method_AdminOptionsSubmenu">AdminOptionsSubmenu()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Add admin custom post type submenu</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/NACSL-Controllers-CustomPostType.html#method_Hook">Hook()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>No restricted hook [admin and public] for all custom post type</dd>
+<dd>Standard hook no restriction.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/NACSL-Controllers-CptSubCom.html#method_Options">Options()</a>
+    <a href="classes/NACSL-Controllers-CustomPostType.html#method_Options">Options()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Custom post type options</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/NACSL-Controllers-CustomPostType.html#method_PublicHook">PublicHook()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd></dd>
+<dd>Public hooks only</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/NACSL-Controllers-CustomPostType.html#method_Register">Register()</a>
@@ -308,7 +326,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
@@ -319,11 +337,23 @@
     <span class="phpdocumentor-signature__name">$slug</span>
     </code>
 
-        <section class="phpdocumentor-description"></section>
-
-        <section class="phpdocumentor-description"></section>
-
     
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">uses</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><abbr title="\NACSL\Controllers\NACSL\Models\CustomPostType::post_type">CustomPostType::post_type</abbr></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
 
 </article>
                     <article
@@ -360,6 +390,74 @@
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_hasOptions">
+        $hasOptions
+        <a href="classes/NACSL-Controllers-CustomPostType.html#property_hasOptions" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">17</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">bool</span>
+    <span class="phpdocumentor-signature__name">$hasOptions</span>
+     = <span class="phpdocumentor-signature__default-value">false</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_taxSubmenuOptions">
+        $taxSubmenuOptions
+        <a href="classes/NACSL-Controllers-CustomPostType.html#property_taxSubmenuOptions" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$taxSubmenuOptions</span>
+     = <span class="phpdocumentor-signature__default-value">array()</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
@@ -380,7 +478,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">18</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
@@ -424,17 +522,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">54</span>
+    <span class="phpdocumentor-element-found-in__line">98</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Admin hooks only</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">AdminHook</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -450,24 +548,24 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_AdminMenu">
-        AdminMenu()
-        <a href="classes/NACSL-Controllers-CptSubCom.html#method_AdminMenu" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_AdminOptionsSubmenu">
+        AdminOptionsSubmenu()
+        <a href="classes/NACSL-Controllers-CustomPostType.html#method_AdminOptionsSubmenu" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CptSubCom.php"><a href="files/includes-controllers-cptsubcom.html"><abbr title="includes/Controllers/CptSubCom.php">CptSubCom.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">11</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Add admin custom post type submenu</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">AdminMenu</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                    <span class="phpdocumentor-signature__name">AdminOptionsSubmenu</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -490,11 +588,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">49</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">No restricted hook [admin and public] for all custom post type</p>
+        <p class="phpdocumentor-summary">Standard hook no restriction.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -518,22 +616,22 @@
 >
     <h4 class="phpdocumentor-element__name" id="method_Options">
         Options()
-        <a href="classes/NACSL-Controllers-CptSubCom.html#method_Options" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/NACSL-Controllers-CustomPostType.html#method_Options" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CptSubCom.php"><a href="files/includes-controllers-cptsubcom.html"><abbr title="includes/Controllers/CptSubCom.php">CptSubCom.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Custom post type options</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">Options</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -556,17 +654,17 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">56</span>
+    <span class="phpdocumentor-element-found-in__line">111</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Public hooks only</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">PublicHook</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
     
     
 
@@ -589,7 +687,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">52</span>
 
     </aside>
 
@@ -622,7 +720,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="includes/Controllers/CustomPostType.php"><a href="files/includes-controllers-customposttype.html"><abbr title="includes/Controllers/CustomPostType.php">CustomPostType.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">38</span>
 
     </aside>
 
