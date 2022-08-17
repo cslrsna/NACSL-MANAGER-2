@@ -32,14 +32,14 @@ final class App
     public function Execute(array $actions):void
     {
         foreach ($actions as $action) {
-            switch (true) {
-                case $action instanceof IHook:
-                    $action->Hook();
-                case $action instanceof IHookAdmin:
-                    $action->AdminHook();
-                case $action instanceof IHookPublic:
-                    $action->PublicHook();
-            }
+            $interfaces = class_implements($action);
+            $ns = 'NACSL\\Utilities\\Interfaces\\';
+
+            if(in_array("{$ns}IHook", $interfaces))         $action->Hook();
+            if(in_array("{$ns}IHookAdmin", $interfaces))    $action->AdminHook();
+            if(in_array("{$ns}IHookPublic", $interfaces))   $action->PublicHook();
+
+            unset($interfaces);
         }
     }
 }

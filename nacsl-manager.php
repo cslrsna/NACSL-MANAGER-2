@@ -32,6 +32,7 @@ if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
 use NACSL\App;
+use NACSL\Controllers\Admin;
 use NACSL\Controllers\CptGroups;
 use NACSL\Controllers\CptMeetings;
 use NACSL\Controllers\CptSubCom;
@@ -46,6 +47,7 @@ use NACSL\Services\StartupService;
 use NACSL\Services\TaxService;
 use NACSL\Utilities\AppConstants;
 use Timber\Timber;
+
 
 AppConstants::$__FILE__ = __file__;
 AppConstants::$__DIR__ = __dir__;
@@ -65,7 +67,7 @@ if( !function_exists('get_plugin_data') ){
 AppConstants::$data = get_plugin_data(__file__);   
 AppConstants::$version = AppConstants::$data['Version'];
 
-Timber::$locations = __DIR__ . "/includes/Views";
+Timber::$locations = __DIR__ . "/src/Views";
 
 
 
@@ -79,6 +81,7 @@ StartupService::$colRegister = array(
     'TaxCities' => new TaxCities(new TaxService(), array('CptMeetings', 'CptActivities')),
     'TaxFormats' => new TaxFormats(new TaxService(), 'CptMeetings'),
     'TaxStates' => new TaxStates(new TaxService(), 'CptMeetings'),
+    'Admin' => new Admin()
 );
 
 
@@ -92,10 +95,3 @@ if( is_plugin_active(plugin_basename(__file__)) )
     $app = App::GetInstance();
     $app->Execute(StartupService::$colRegister);
 }
-
-//--------------------- FOR DEV ONLY
-
-function NACSL_DEBUG($var){
-    $file = __DIR__ . '/nacslDebug.json';
-    file_put_contents($file, json_encode($var));
-};

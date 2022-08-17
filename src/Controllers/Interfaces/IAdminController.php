@@ -5,5 +5,6 @@ use NACSL\Utilities\Interfaces\IHookAdmin;
 
 interface IAdminController extends IHookAdmin
 {
-    public function AdminMenu(string $context):void;
+    public function AdminMenu():void;
+    public function RoleSettings():void;
 }
