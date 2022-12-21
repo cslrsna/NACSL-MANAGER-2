@@ -1,2 +1,3 @@
 .phpdoc/
 nacslDebug.json
+.vendor/
