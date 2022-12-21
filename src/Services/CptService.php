@@ -3,7 +3,7 @@ namespace NACSL\Services;
 
 use NACSL\Models\CustomPostType as CptModel;
 use NACSL\Services\Interfaces\ICptService;
-use NACSL\Utilities\AdminSettingPage;
+use NACSL\Utilities\AdminSettingFactory;
 use NACSL\Utilities\EnumSettingFieldInputType;
 use NACSL\Utilities\EnumSettingFieldType;
 use Timber\Timber;
@@ -88,7 +88,7 @@ class CptService implements ICptService
      */
     public function TaxOptionsFactory(array $options):void
     {
-        $optGroup = new AdminSettingPage($options['option_group']);
+        $optGroup = new AdminSettingFactory($options['option_group']);
 
         $sectionId = "categories";        
         $optGroup->AddSection($sectionId, "Afficher les taxonomies");

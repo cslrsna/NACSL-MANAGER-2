@@ -32,7 +32,7 @@ if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
 use NACSL\App;
-use NACSL\Controllers\Admin;
+use NACSL\Controllers\AdminPage;
 use NACSL\Controllers\CptGroups;
 use NACSL\Controllers\CptMeetings;
 use NACSL\Controllers\CptSubCom;
@@ -81,7 +81,7 @@ StartupService::$colRegister = array(
     'TaxCities' => new TaxCities(new TaxService(), array('CptMeetings', 'CptActivities')),
     'TaxFormats' => new TaxFormats(new TaxService(), 'CptMeetings'),
     'TaxStates' => new TaxStates(new TaxService(), 'CptMeetings'),
-    'Admin' => new Admin()
+    'Admin' => new AdminPage()
 );
 
 

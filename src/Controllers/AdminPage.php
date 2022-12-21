@@ -3,7 +3,7 @@ namespace NACSL\Controllers;
 
 use NACSL\Controllers\Interfaces\IAdminController;
 
-class Admin implements IAdminController
+class AdminPage implements IAdminController
 {
 
     public function RoleSettings(): void 
@@ -26,7 +26,7 @@ class Admin implements IAdminController
 
     public function AdminHook(): void 
     {
-        add_action('wp_dashboard_setup', [$this,'RoleSettings']);
+        //add_action('wp_dashboard_setup', [$this,'RoleSettings']);
     }
     
 }

@@ -50,7 +50,7 @@ enum EnumSettingFieldType:string
  * Add setting page
  * @package NACSL\Utilities
  */
-class AdminSettingPage implements IAdminSettingPage
+class AdminSettingFactory implements IAdminSettingPage
 {
     public EnumSettingFieldInputType $fieldinputType;
     public EnumSettingFieldType $fieldType;

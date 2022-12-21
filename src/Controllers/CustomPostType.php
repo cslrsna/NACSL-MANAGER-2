@@ -29,7 +29,15 @@ abstract class CustomPostType implements ICptController
         $this->model = $this->_CptServ->GetModelData(end($cptName));
         $this->slug = $this->model->post_type;
     }
-
+    
+    /**
+     * All register logic for all costom post type
+     * @return void 
+     */
+    public function Register(): void 
+    {
+        register_post_type($this->slug, $this->model->ToArray());
+    } 
 
     /**
      * All unregister logic for all costom post type
@@ -43,16 +51,7 @@ abstract class CustomPostType implements ICptController
             }
 
         unregister_post_type($this->slug);
-    }
-    
-    /**
-     * All register logic for all costom post type
-     * @return void 
-     */
-    public function Register(): void 
-    {
-        register_post_type($this->slug, $this->model->ToArray());
-    }    
+    }   
 
     /**
      * Add admin custom post type submenu

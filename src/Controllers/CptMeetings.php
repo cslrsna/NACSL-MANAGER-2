@@ -2,7 +2,7 @@
 namespace NACSL\Controllers;
 
 use NACSL\Services\Interfaces\ICptService;
-use NACSL\Utilities\AdminSettingPage;
+use NACSL\Utilities\AdminSettingFactory;
 use NACSL\Utilities\EnumSettingFieldInputType;
 use NACSL\Utilities\EnumSettingFieldType;
 
@@ -22,7 +22,7 @@ class CptMeetings extends CustomPostType
     public function AddOptionTest()
     {
         
-        $option_group = $this->model->option_group;
+        /* $option_group = $this->model->option_group;
         $optGroup = new AdminSettingPage($option_group );
 
         $sectionDefault = $option_group  . "_section_test";        
@@ -36,15 +36,15 @@ class CptMeetings extends CustomPostType
             type: EnumSettingFieldType::STRING
         );
 
-        $optGroup->Factory();         
+        $optGroup->Factory();  */        
     }
 
     public function AdminHook(): void
     {
         parent::AdminHook();
-        if($this->hasOptions)
+        /* if($this->hasOptions)
         {
             add_action('admin_init', [$this, 'AddOptionTest']);
-        }
+        } */
     }
 }
