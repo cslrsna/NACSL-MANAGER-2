@@ -28,7 +28,7 @@ final class StartupService
      * Collection of startup register objects 
      * @var array
      */
-    public static array $colRegister = array();
+    public static array $registersArray = array();
     
     /**
      * Activate NACSL-MANAGER
@@ -40,7 +40,7 @@ final class StartupService
         if( !get_option(AppConstants::OPT_VERSION))
             update_option(AppConstants::OPT_VERSION, AppConstants::$data['Version']);
 
-        foreach (self::$colRegister as $obj) {
+        foreach (self::$registersArray as $obj) {
             $obj->Register();
         }       
 
@@ -59,7 +59,7 @@ final class StartupService
 
         update_option(AppConstants::OPT_ACTIVATED, false);
 
-        foreach (self::$colRegister as $obj) {
+        foreach (self::$registersArray as $obj) {
             $obj->Unregister();
         }
 

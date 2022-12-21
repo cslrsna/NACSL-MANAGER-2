@@ -22,6 +22,24 @@ class AdminPage implements IAdminController
         }
     }
 
+    /**
+     * All unregister logic for all costom post type
+     * @return void 
+     */
+    public function Register(): void 
+    { 
+        // TODO 
+    } 
+
+    /**
+     * All unregister logic for all costom post type
+     * @return void 
+     */
+    public function Unregister(): void 
+    { 
+        // TODO 
+    } 
+
     public function AdminMenu(): void { }
 
     public function AdminHook(): void 

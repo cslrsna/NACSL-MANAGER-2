@@ -28,6 +28,7 @@
  * along with NACSL-MANAGER. If not, see https://github.com/cslrsna/NACSL-MANAGER-2/blob/main/LICENSE.
  */
 
+if( ! defined('ABSPATH') ) die();
 if( ! defined('WPINC') ) die();
 require 'vendor/autoload.php';
 
@@ -71,7 +72,7 @@ Timber::$locations = __DIR__ . "/src/Views";
 
 
 
-StartupService::$colRegister = array(
+StartupService::$registersArray = array(
     'CptGroups' => new CptGroups(new CptService()),
     'CptMeetings' => new CptMeetings(new CptService()),
     'CptSubCom' => new CptSubCom(new CptService()),
@@ -93,5 +94,5 @@ StartupService::Init();
 if( is_plugin_active(plugin_basename(__file__)) )
 {
     $app = App::GetInstance();
-    $app->Execute(StartupService::$colRegister);
+    $app->Execute(StartupService::$registersArray);
 }
