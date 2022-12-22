@@ -77,8 +77,9 @@ abstract class CustomPostType implements ICptController
      */
     public function Options(): void
     {
-        if( get_object_taxonomies( $this->slug ) )
-            $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions);        
+        if( get_object_taxonomies( $this->slug ) ){
+            $this->_CptServ->TaxOptionsFactory($this->taxSubmenuOptions); 
+        }       
     }
 
     /**

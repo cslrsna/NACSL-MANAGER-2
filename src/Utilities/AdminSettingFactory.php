@@ -194,10 +194,7 @@ class AdminSettingFactory implements IAdminSettingPage
      * @param array|null $attr input attribute
      * @return void 
      * @throws LoaderError 
-     * @throws LoaderError 
      * @throws RuntimeError 
-     * @throws RuntimeError 
-     * @throws SyntaxError 
      * @throws SyntaxError 
      */
     private function SelectInputView(EnumSettingFieldInputType $inputType, string $id, $option, array $attr = null):void
