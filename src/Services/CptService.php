@@ -89,22 +89,24 @@ class CptService implements ICptService
     public function TaxOptionsFactory(array $options):void
     {
         // TODO: MAJOR BUG THAT BLOCK AJAX
-        // $optGroup = new AdminSettingFactory($options['option_group']);
-
-        // $sectionId = "categories";        
-        // $optGroup->AddSection($sectionId, "Afficher les taxonomies");
-
-        // foreach ($options['fields'] as $field) {            
-        //     $optGroup->AddField(
-        //         id: $field['id'], 
-        //         title:  $field['title'], 
-        //         section:$sectionId,
-        //         inputType:EnumSettingFieldInputType::CHECKBOX,
-        //         type: EnumSettingFieldType::BOOLEAN
-        //     );
-        // }
-
-        // $optGroup->Factory(); 
+        if(isset($options['option_group'])){
+            $optGroup = new AdminSettingFactory($options['option_group']);
+    
+            $sectionId = "categories";        
+            $optGroup->AddSection($sectionId, "Afficher les taxonomies");
+    
+            foreach ($options['fields'] as $field) {            
+                $optGroup->AddField(
+                    id: $field['id'], 
+                    title:  $field['title'], 
+                    section:$sectionId,
+                    inputType:EnumSettingFieldInputType::CHECKBOX,
+                    type: EnumSettingFieldType::BOOLEAN
+                );
+            }
+    
+            $optGroup->Factory(); 
+        }
     }
 
 }
